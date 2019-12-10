@@ -14,3 +14,110 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+  
+.home .content_logo {
+    margin: auto;
+    height: 100%;
+}
+  
+.home .logo {
+    display: block;
+    max-width: 253px;
+    max-height: 78px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu-inner { width: 100%; }
+.menu{
+    width: calc(100% - 55px);
+    -webkit-box-shadow: 11px -1px 9px -4px rgba(201,201,201,1);
+    -moz-box-shadow: 11px -1px 9px -4px rgba(201,201,201,1);
+    box-shadow: 11px -1px 9px -4px rgba(201,201,201,1);
+}
+.scroll-content{
+    padding: 56px 35px;
+}
+.bar-button-default-ios,
+.bar-button-default.bar-button-ios-default,
+.bar-button-clear-ios-default {
+  color: #000;
+}
+
+.bar-button-default-ios:hover:not(.disable-hover),
+.bar-button-default.bar-button-ios-default:hover:not(.disable-hover),
+.bar-button-clear-ios-default:hover:not(.disable-hover) {
+  color: #000;
+}
+.header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0;
+}
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {
+    border-style: none;
+    border-color: white;
+}
+.toolbar-background-ios {
+    background: #fff;
+}
+.cerrar {
+    font-size: 30px;
+    top: 12px;
+    position: absolute;
+    right: 15px;
+}
+
+.list-md .item-block .item-inner {
+    border-bottom: none;
+}
+.label-md,.label-ios {
+    margin: 23px 0 23px 0;
+    text-align: center;
+    color: #0B3B61;
+    font-weight: 600;
+    font-size: 20px;
+}
+.item-ios{
+    padding-left: 0;
+}
+.list-ios .item-block .item-inner {
+    border-bottom: none;
+}
+.input-wrapper {
+    text-align: center;
+    font-size: 20px;
+    color: #0B3B61;
+    font-weight: 600;
+}
+.list-ios > .item-block:first-child {
+    border-top: none;
+}
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: none;
+}
+.item-ios[detail-push] .item-inner, button.item-ios:not([detail-none]) .item-inner, a.item-ios:not([detail-none]) .item-inner {
+    background-image: none;
+    padding-right: 0;
+    background-position: right 14px center;
+    background-position: right calc(14px + constant(safe-area-inset-right)) center;
+    background-position: right calc(14px + env(safe-area-inset-right)) center;
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+}
+.center{text-align: center;}
+.button-ios,.button-md{
+    text-transform: initial;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0px 34px;
+    font-size: 20px;
+    height: 40px;
+    margin-top: 66px;
+    margin-bottom: 83px;
+}
