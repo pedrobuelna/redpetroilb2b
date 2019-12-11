@@ -1,0 +1,96 @@
+<!--
+  Generated template for the DireccionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+  Generated template for the DireccionesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--
+  Generated template for the PedidoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <div class="content_logo header">
+          <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
+      </div>
+      <button ion-button menuToggle right>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding id="direccion">
+    <div class="center">
+        <label class="titulo1">JMS Data Services</label>
+        <label class="text1">+52 1 473 123 4567</label>
+        <label class="text1">consulta@jmsdataservices.com</label>
+    </div>
+    <br>
+    <label class="titulo1">Dirección #1</label>
+    <br><br>
+    <form action="" id="direccionForm" name="direccionForm">
+        <!-- <form action="" [formGroup]="formgroup" id="login" name="login"> -->
+        <div class="input_content">
+          <label for="descripcion">Descripción de la dirección</label>
+          <input type="text" id="descripcion" name="descripcion" required>
+          <!-- <input type="text" id="descrpcion" formControlName="descrpcion" required> -->
+          <!-- <span class="error1" *ngIf="descrpcion.hasError('required') && descrpcion.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="descrpcion.hasError('minlength') && descrpcion.touched ">* 10 Caractéres minimo</span> -->
+        </div>
+        <div class="input_content">
+          <label for="nombre">Nombre del Contacto</label>
+          <input type="text" id="nombre" name="nombre" required>
+          <!-- <input type="text" id="nombre" formControlName="nombre" required> -->
+          <!-- <img src="../../assets/imgs/ver_input.png" alt="ver" class="ver" (click)="onclickVerPassword()"> -->
+          <!-- <img src="../../assets/imgs/ver_input.png" alt="ver" class="ver"> -->
+          <!-- <span class="error1" *ngIf="nombre.hasError('required') && nombre.touched ">* Rellene el Campo</span>
+          <span class="error1" *ngIf="nombre.hasError('minlength') && nombre.touched ">* 5 Caractéres minimo</span> -->
+        </div>
+        <div class="input_content">
+          <label for="telefono">Teléfono</label>
+          <input type="number" id="telefono" name="telefono" required>
+        </div>
+        <div class="input_content">
+          <label for="direccionFacturacion">Dirección de Facturación</label>
+          <input type="text" id="direccionFacturacion" name="direccionFacturacion" required>
+        </div>
+        <div class="input_content">
+          <label for="numeroExterior"># Exterior</label>
+          <input type="number" id="numeroExterior" name="numeroExterior" required>
+        </div>
+        <div class="input_content">
+          <label for="numeroInterior"># Interior</label>
+          <input type="number" id="numeroInterior" name="numeroInterior" required>
+        </div>
+        <div class="input_content">
+          <label for="colonia">Colonia</label>
+          <input type="text" id="colonia" name="colonia" required>
+        </div>
+        <div class="input_content">
+          <label for="cp">Codigo Postal</label>
+          <input type="number" id="cp" name="cp" required>
+        </div>
+        <div class="input_content">
+          <label for="localidad">Localidad</label>
+          <input type="text" id="localidad" name="localidad" required>
+        </div>
+        <div class="input_content">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad" required>
+        </div>
+        <div class="input_content">
+          <label for="estado">Estado</label>
+          <input type="text" id="estado" name="estado" required>
+        </div>
+        <div class="center">
+            <button ion-button color="orange" type="submit" (click)="onclickMisDatos()">Agregar Dirección</button>
+        </div>
+      </form>
+  </ion-content>

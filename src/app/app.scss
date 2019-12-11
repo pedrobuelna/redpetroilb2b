@@ -135,19 +135,39 @@ body {
     margin: auto;
     margin-bottom: 33px;
 }
-#login label{
+#login label,
+#direccion label,
+#misdatosForm label{
     font-size: 16px;
     font-weight: 500;
 }
-#login input {
+#direccionForm form label,
+#misdatosForm label{
+    color: #0B3B61;
+}
+#login input,
+#direccionForm input,
+#misdatosForm input{
     width: 100%;
     height: 46px;
     border: none;
     border-bottom: 2px solid black;
     margin-bottom: 18px;
     font-size: 34px;
-    color: #0B3B61;
     text-align: center;
+}
+#direccionForm input,
+#misdatosForm input{
+    margin-bottom: 3px;
+}
+.input_content {
+    position: relative;
+}
+img.ver {
+    position: absolute;
+    right: 0;
+    width: 45px;
+    top: 26px;
 }
 .error1{color: red;font-size: 15px;margin-bottom: 18px;display: inline-block;}
 //pedido
@@ -183,7 +203,6 @@ body {
     color: #0B3B61;
 }
 #pedidoForm label{font-weight: 600;margin-bottom: 15px;display: inline-block;}
-
 #pedidoForm input,
 #pedidoForm select,
 #pedidoForm textarea{
@@ -192,11 +211,20 @@ body {
     height: 31px;
     border-radius: 0;
     margin-bottom: 15px;
+    background-color:white;
+}
+#pedidoForm select{
+    background-image: url("../assets/imgs/arrow.png");
+    background-size: 10px;
+    background-position: right 10px center;
+
+    background-repeat: no-repeat;
 }
 #pedidoForm textarea{
     height: 145px;
 }
-#pedidoForm button{
+#pedidoForm button,
+#direcciones button{
     height: 69px;
     font-size: 20px !important;
     font-weight: 500;

@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+webpackJsonp([5],{
 
 /***/ 109:
 /***/ (function(module, exports) {
@@ -21,12 +21,24 @@ webpackEmptyAsyncContext.id = 109;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../pages/login/login.module": [
+	"../pages/direccion/direccion.module": [
 		271,
+		3
+	],
+	"../pages/direcciones/direcciones.module": [
+		272,
+		2
+	],
+	"../pages/login/login.module": [
+		273,
+		4
+	],
+	"../pages/misdatos/misdatos.module": [
+		274,
 		1
 	],
 	"../pages/pedido/pedido.module": [
-		272,
+		275,
 		0
 	]
 };
@@ -144,7 +156,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/direccion/direccion.module#DireccionPageModule', name: 'DireccionPage', segment: 'direccion', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/direcciones/direcciones.module#DireccionesPageModule', name: 'DireccionesPage', segment: 'direcciones', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/misdatos/misdatos.module#MisdatosPageModule', name: 'MisdatosPage', segment: 'misdatos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedido/pedido.module#PedidoPageModule', name: 'PedidoPage', segment: 'pedido', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -409,14 +424,24 @@ var LoginPage = /** @class */ (function () {
         this.navCtrl.setRoot("PedidoPage", null, { direction: "back", animate: true });
         //this.navCtrl.push(PedidoPage);
     };
+    LoginPage.prototype.onclickVerPassword = function () {
+        var b = document.querySelector("#password");
+        if (b.getAttribute("type") == "text") {
+            b.setAttribute("type", "password");
+        }
+        else {
+            b.setAttribute("type", "text");
+        }
+    };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <!-- <ion-title>Home</ion-title> -->\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding id="login">\n    <!-- <h3>Ionic Menu Starter</h3> -->\n    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n    <div class="content_logo">\n        <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    </div>\n    <form action="" [formGroup]="formgroup" id="login" name="login">\n      <div class="input_content">\n        <label for="numeroCelular">Cuenta/Numero de Celular</label>\n        <input type="text" id="numeroCelular" formControlName="numeroCelular" required>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'required\') && numeroCelular.touched">* Rellene el Campo</span>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'minlength\') && numeroCelular.touched ">* 10 Caractéres minimo</span>\n      </div>\n      <div class="input_content">\n        <label for="password">Contraseña</label>\n        <input type="password" id="password" formControlName="password" required>\n        <span class="error1" *ngIf="password.hasError(\'required\') && password.touched ">* Rellene el Campo</span>\n        <span class="error1" *ngIf="password.hasError(\'minlength\') && password.touched ">* 5 Caractéres minimo</span>\n      </div>\n      <div class="center">\n          <button ion-button color="orange" type="submit" [disabled]="formgroup.invalid" (click)="onclickPagePedidoNuevo()">Iniciar Sesión</button>\n      </div>\n    </form>\n  </ion-content>\n  '/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <!-- <ion-title>Home</ion-title> -->\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding id="login">\n    <!-- <h3>Ionic Menu Starter</h3> -->\n    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n    <div class="content_logo">\n        <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    </div>\n    <form action="" [formGroup]="formgroup" id="login" name="login">\n      <div class="input_content">\n        <label for="numeroCelular">Cuenta/Numero de Celular</label>\n        <input type="text" id="numeroCelular" formControlName="numeroCelular" required>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'required\') && numeroCelular.touched">* Rellene el Campo</span>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'minlength\') && numeroCelular.touched ">* 10 Caractéres minimo</span>\n      </div>\n      <div class="input_content">\n        <label for="password">Contraseña</label>\n        <input type="password" id="password" formControlName="password" required>\n        <img src="../../assets/imgs/ver_input.png" alt="ver" class="ver" (click)="onclickVerPassword()">\n        <span class="error1" *ngIf="password.hasError(\'required\') && password.touched ">* Rellene el Campo</span>\n        <span class="error1" *ngIf="password.hasError(\'minlength\') && password.touched ">* 5 Caractéres minimo</span>\n      </div>\n      <div class="center">\n          <button ion-button color="orange" type="submit" [disabled]="formgroup.invalid" (click)="onclickPagePedidoNuevo()">Iniciar Sesión</button>\n      </div>\n    </form>\n  </ion-content>\n  '/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
     ], LoginPage);
     return LoginPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=login.js.map

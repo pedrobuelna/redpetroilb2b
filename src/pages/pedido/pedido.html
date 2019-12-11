@@ -22,21 +22,20 @@
         <label class="titulo2">Pedido Nuevo</label>
     </div>
     <form action="" id="pedidoForm" name="pedidoForm">
-      <ion-grid>
           <ion-row class="ion-justify-content-start">
             <label for="fechaSurtido">Fecha y hora de surtido de pedido</label>
-            <ion-col size="3">
+            <ion-col size="2">
               <div>
                   <input type="date" id="fechaSurtido">
               </div>
             </ion-col>
-            <ion-col size="3">
+            <ion-col size="2">
               <div>
                   <input type="time" id="horaSurtido">
               </div>
             </ion-col>
           </ion-row>
-      </ion-grid>
+      
       <div class="input_content">
         <label for="estacion">Estación de servicio</label>
           <select name="estacion" id="estacion">
@@ -79,7 +78,7 @@
         <textarea name="comentarios" id="comentarios"></textarea>
       </div>
       <div class="center">
-          <button ion-button color="orange" type="submit">Generar Pedido Nuevo</button>
+          <button ion-button color="orange" type="submit" (click)="onclickDirecciones()">Generar Pedido Nuevo</button>
       </div>
     </form>
   </ion-content>

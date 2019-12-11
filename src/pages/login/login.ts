@@ -38,4 +38,13 @@ export class LoginPage {
     this.navCtrl.setRoot("PedidoPage",null,{direction:"back",animate:true})
     //this.navCtrl.push(PedidoPage);
   }
+  onclickVerPassword(){
+    var b = document.querySelector("#password"); 
+    
+    if(b.getAttribute("type")=="text"){
+      b.setAttribute("type", "password");
+    }else{
+      b.setAttribute("type", "text");
+    }
+  }
 }
