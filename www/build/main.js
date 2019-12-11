@@ -1,4 +1,4 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
 /***/ 109:
 /***/ (function(module, exports) {
@@ -23,6 +23,10 @@ webpackEmptyAsyncContext.id = 109;
 var map = {
 	"../pages/login/login.module": [
 		271,
+		1
+	],
+	"../pages/pedido/pedido.module": [
+		272,
 		0
 	]
 };
@@ -70,10 +74,10 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle right>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!-- <ion-title>Home</ion-title> -->\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="home">\n  <!-- <h3>Ionic Menu Starter</h3> -->\n  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n  <div class="content_logo">\n      <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], HomePage);
     return HomePage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -140,7 +144,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedido/pedido.module#PedidoPageModule', name: 'PedidoPage', segment: 'pedido', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],
@@ -230,15 +235,14 @@ var MyApp = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/app/app.html"*/'<ion-menu [content]="content" type="overlay">\n    <!-- <ion-header>\n        <ion-navbar>\n            <button ion-button menuToggle right>\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-navbar>\n    </ion-header> -->\n  <ion-icon name="close" menuToggle class="cerrar"></ion-icon>\n  <ion-content class="menu">\n    <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    <div class="center">\n        <button ion-button color="orange" (click)="onclickPageLogin()" >Iniciar Sesión</button>\n    </div>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/app/app.html"*/'<ion-menu [content]="content" type="overlay">\n    <!-- <ion-header>\n        <ion-navbar>\n            <button ion-button menuToggle right>\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-navbar>\n    </ion-header> -->\n  <ion-icon name="close" menuToggle class="cerrar"></ion-icon>\n  <ion-content class="menu">\n    <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    <div class="center">\n        <button ion-button color="orange" menuToggle (click)="onclickPageLogin()" >Iniciar Sesión</button>\n    </div>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -367,6 +371,7 @@ var GlobalVarsProvider = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(15);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -378,6 +383,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -385,25 +391,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, navParams) {
+    function LoginPage(navCtrl, navParams, formbuilder) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.formbuilder = formbuilder;
+        this.formgroup = formbuilder.group({
+            numeroCelular: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].minLength(10)]],
+            password: ['', [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].minLength(5)]]
+        });
+        this.numeroCelular = this.formgroup.controls["numeroCelular"];
+        this.password = this.formgroup.controls["password"];
     }
-    LoginPage_1 = LoginPage;
     LoginPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad LoginPage');
     };
-    LoginPage.prototype.onclickPageLogin = function () {
-        this.navCtrl.push(LoginPage_1);
+    LoginPage.prototype.onclickPagePedidoNuevo = function () {
+        this.navCtrl.setRoot("PedidoPage", null, { direction: "back", animate: true });
+        //this.navCtrl.push(PedidoPage);
     };
-    LoginPage = LoginPage_1 = __decorate([
+    LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!-- <ion-title>Home</ion-title> -->\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <!-- <h3>Ionic Menu Starter</h3> -->\n\n  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <!-- <ion-title>Home</ion-title> -->\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding id="login">\n    <!-- <h3>Ionic Menu Starter</h3> -->\n    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n    <div class="content_logo">\n        <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    </div>\n    <form action="" [formGroup]="formgroup" id="login" name="login">\n      <div class="input_content">\n        <label for="numeroCelular">Cuenta/Numero de Celular</label>\n        <input type="text" id="numeroCelular" formControlName="numeroCelular" required>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'required\') && numeroCelular.touched">* Rellene el Campo</span>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'minlength\') && numeroCelular.touched ">* 10 Caractéres minimo</span>\n      </div>\n      <div class="input_content">\n        <label for="password">Contraseña</label>\n        <input type="password" id="password" formControlName="password" required>\n        <span class="error1" *ngIf="password.hasError(\'required\') && password.touched ">* Rellene el Campo</span>\n        <span class="error1" *ngIf="password.hasError(\'minlength\') && password.touched ">* 5 Caractéres minimo</span>\n      </div>\n      <div class="center">\n          <button ion-button color="orange" type="submit" [disabled]="formgroup.invalid" (click)="onclickPagePedidoNuevo()">Iniciar Sesión</button>\n      </div>\n    </form>\n  </ion-content>\n  '/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object])
     ], LoginPage);
     return LoginPage;
-    var LoginPage_1, _a, _b;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=login.js.map

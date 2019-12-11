@@ -49,7 +49,12 @@ body {
 .bar-button-clear-ios-default {
   color: #000;
 }
-
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+    background: none;
+}
+.toolbar-background-md{
+    background: white;
+}
 .bar-button-default-ios:hover:not(.disable-hover),
 .bar-button-default.bar-button-ios-default:hover:not(.disable-hover),
 .bar-button-clear-ios-default:hover:not(.disable-hover) {
@@ -120,4 +125,80 @@ body {
     height: 40px;
     margin-top: 66px;
     margin-bottom: 83px;
+}
+
+//Login
+#login .logo {
+    display: block;
+    max-width: 253px;
+    max-height: 78px;
+    margin: auto;
+    margin-bottom: 33px;
+}
+#login label{
+    font-size: 16px;
+    font-weight: 500;
+}
+#login input {
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 18px;
+    font-size: 34px;
+    color: #0B3B61;
+    text-align: center;
+}
+.error1{color: red;font-size: 15px;margin-bottom: 18px;display: inline-block;}
+//pedido
+.content_logo.header .logo{
+    max-width: 81px;
+    max-height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.titulo1 {
+    display: inline-block;
+    width: 100%;
+    font-size: 30px !important;
+    color: #F98E2B;
+    font-weight: 500 !important;
+    margin-bottom: 10px;
+}
+.text1 {
+    color: #0B3B61;
+    font-size: 13px !important;
+    display: block;
+    margin-bottom: 10px;
+}
+.titulo2 {
+    display: block;
+    color: #0B3B61;
+    font-size: 20px !important;
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+#pedido{
+    font-size: 16px;
+    color: #0B3B61;
+}
+#pedidoForm label{font-weight: 600;margin-bottom: 15px;display: inline-block;}
+
+#pedidoForm input,
+#pedidoForm select,
+#pedidoForm textarea{
+    width: 100%;
+    border: 2px solid #707070;
+    height: 31px;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+#pedidoForm textarea{
+    height: 145px;
+}
+#pedidoForm button{
+    height: 69px;
+    font-size: 20px !important;
+    font-weight: 500;
+    width: 100%;
 }

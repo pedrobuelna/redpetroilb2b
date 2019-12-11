@@ -5,16 +5,36 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <!-- <ion-title>Home</ion-title> -->
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <!-- <h3>Ionic Menu Starter</h3> -->
-
-  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
-</ion-content>
+    <ion-navbar>
+      <button ion-button menuToggle right>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <!-- <ion-title>Home</ion-title> -->
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding id="login">
+    <!-- <h3>Ionic Menu Starter</h3> -->
+    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
+    <div class="content_logo">
+        <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
+    </div>
+    <form action="" [formGroup]="formgroup" id="login" name="login">
+      <div class="input_content">
+        <label for="numeroCelular">Cuenta/Numero de Celular</label>
+        <input type="text" id="numeroCelular" formControlName="numeroCelular" required>
+        <span class="error1" *ngIf="numeroCelular.hasError('required') && numeroCelular.touched">* Rellene el Campo</span>
+        <span class="error1" *ngIf="numeroCelular.hasError('minlength') && numeroCelular.touched ">* 10 Caractéres minimo</span>
+      </div>
+      <div class="input_content">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" formControlName="password" required>
+        <span class="error1" *ngIf="password.hasError('required') && password.touched ">* Rellene el Campo</span>
+        <span class="error1" *ngIf="password.hasError('minlength') && password.touched ">* 5 Caractéres minimo</span>
+      </div>
+      <div class="center">
+          <button ion-button color="orange" type="submit" [disabled]="formgroup.invalid" (click)="onclickPagePedidoNuevo()">Iniciar Sesión</button>
+      </div>
+    </form>
+  </ion-content>
+  

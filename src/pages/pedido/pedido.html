@@ -1,0 +1,85 @@
+<!--
+  Generated template for the PedidoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <div class="content_logo header">
+          <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
+      </div>
+      <button ion-button menuToggle right>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding id="pedido">
+    <div class="center">
+        <label class="titulo1">JMS Data Services</label>
+        <label class="text1">+52 1 473 123 4567</label>
+        <label class="text1">consulta@jmsdataservices.com</label>
+        <label class="titulo2">Pedido Nuevo</label>
+    </div>
+    <form action="" id="pedidoForm" name="pedidoForm">
+      <ion-grid>
+          <ion-row class="ion-justify-content-start">
+            <label for="fechaSurtido">Fecha y hora de surtido de pedido</label>
+            <ion-col size="3">
+              <div>
+                  <input type="date" id="fechaSurtido">
+              </div>
+            </ion-col>
+            <ion-col size="3">
+              <div>
+                  <input type="time" id="horaSurtido">
+              </div>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      <div class="input_content">
+        <label for="estacion">Estación de servicio</label>
+          <select name="estacion" id="estacion">
+            <option value="1">Estacion 123</option>
+            <option value="2">Estacion 456</option>
+          </select>
+      </div>
+      <div class="input_content">
+        <label for="formaEntrega">Forma de entrega</label>
+          <select name="formaEntrega" id="formaEntrega">
+            <option value="1">PETROIL retira producto</option>
+            <option value="2">PEMEX retira producto</option>
+            <option value="3">Cliente retira producto de PEMEX</option>
+            <option value="4">Cliente retira producto Planta</option>
+          </select>
+      </div>
+      <div class="input_content">
+        <label for="formaCompra">Forma de compra</label>
+          <select name="formaCompra" id="formaCompra">
+            <option value="1">Crédito</option>
+            <option value="2">Efectivo</option>
+          </select>
+      </div>
+      <div class="input_content">
+        <label for="tipoProducto">Tipo de producto</label>
+          <select name="tipoProducto" id="tipoProducto">
+            <option value="1">Diesel Automotriz PETROIL</option>
+            <option value="2">Gasolina PETROIL</option>
+          </select>
+      </div>
+      <div class="input_content">
+        <label for="cantidad">Cantidad</label>
+          <select name="cantidad" id="cantidad">
+            <option value="1">2700</option>
+            <option value="2">3500</option>
+          </select>
+      </div>
+      <div class="input_content">
+        <label for="cantidad">Comentarios</label>
+        <textarea name="comentarios" id="comentarios"></textarea>
+      </div>
+      <div class="center">
+          <button ion-button color="orange" type="submit">Generar Pedido Nuevo</button>
+      </div>
+    </form>
+  </ion-content>

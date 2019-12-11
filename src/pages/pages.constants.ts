@@ -1,7 +1,7 @@
 //Constants for getting type references
 export const REGISTRO_PAGE = 'RegistroPage';
 export const LOGIN_PAGE = 'LoginPage';
-export const PRUEBA_PAGE = 'PruebaPage';
+export const PEDIDO_NUEVO = 'PedidoPage';
 export const CALENDARIO_PAGE = 'CalendarioPage';
 export const ROOM_SERVICES_PAGE = 'RoomServicesPage';
 export const HOME_PAGE = "HomePage";

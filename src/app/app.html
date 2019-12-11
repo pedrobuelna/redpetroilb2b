@@ -10,7 +10,7 @@
   <ion-content class="menu">
     <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
     <div class="center">
-        <button ion-button color="orange" (click)="onclickPageLogin()" >Iniciar Sesión</button>
+        <button ion-button color="orange" menuToggle (click)="onclickPageLogin()" >Iniciar Sesión</button>
     </div>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
