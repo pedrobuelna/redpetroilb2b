@@ -21,5 +21,5 @@ export class MisdatosPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MisdatosPage');
   }
-
+  
 }

@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 275:
+/***/ 277:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedidoPageModule", function() { return PedidoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedidosPageModule", function() { return PedidosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedido__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedidos__ = __webpack_require__(282);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PedidoPageModule = /** @class */ (function () {
-    function PedidoPageModule() {
+var PedidosPageModule = /** @class */ (function () {
+    function PedidosPageModule() {
     }
-    PedidoPageModule = __decorate([
+    PedidosPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__pedido__["a" /* PedidoPage */],
+                __WEBPACK_IMPORTED_MODULE_2__pedidos__["a" /* PedidosPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedido__["a" /* PedidoPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedidos__["a" /* PedidosPage */]),
             ],
         })
-    ], PedidoPageModule);
-    return PedidoPageModule;
+    ], PedidosPageModule);
+    return PedidosPageModule;
 }());
 
-//# sourceMappingURL=pedido.module.js.map
+//# sourceMappingURL=pedidos.module.js.map
 
 /***/ }),
 
-/***/ 279:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedidoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedidosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,33 +57,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the PedidoPage page.
+ * Generated class for the PedidosPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var PedidoPage = /** @class */ (function () {
-    function PedidoPage(navCtrl, navParams) {
+var PedidosPage = /** @class */ (function () {
+    function PedidosPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    PedidoPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PedidoPage');
+    PedidosPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PedidosPage');
     };
-    PedidoPage.prototype.onclickDirecciones = function () {
-        this.navCtrl.setRoot("DireccionesPage", null, { direction: "back", animate: true });
+    PedidosPage.prototype.onclickPedido = function () {
+        this.navCtrl.setRoot("PedidoPage", null, { direction: "back", animate: true });
         //this.navCtrl.push("DireccionesPage");
     };
-    PedidoPage = __decorate([
+    PedidosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-pedido',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/pedido/pedido.html"*/'<!--\n  Generated template for the PedidoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <div class="content_logo header">\n          <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n      </div>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-navbar>\n  </ion-header>\n<ion-content padding id="pedido">\n    <div class="center">\n        <label class="titulo1">JMS Data Services</label>\n        <label class="text1">+52 1 473 123 4567</label>\n        <label class="text1">consulta@jmsdataservices.com</label>\n        <label class="titulo2">Pedido Nuevo</label>\n    </div>\n    <form action="" id="pedidoForm" name="pedidoForm">\n          <ion-row class="ion-justify-content-start">\n            <label for="fechaSurtido">Fecha y hora de surtido de pedido</label>\n            <ion-col size="2">\n              <div>\n                  <input type="date" id="fechaSurtido">\n              </div>\n            </ion-col>\n            <ion-col size="2">\n              <div>\n                  <input type="time" id="horaSurtido">\n              </div>\n            </ion-col>\n          </ion-row>\n      \n      <div class="input_content">\n        <label for="estacion">Estación de servicio</label>\n          <select name="estacion" id="estacion">\n            <option value="1">Estacion 123</option>\n            <option value="2">Estacion 456</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="formaEntrega">Forma de entrega</label>\n          <select name="formaEntrega" id="formaEntrega">\n            <option value="1">PETROIL retira producto</option>\n            <option value="2">PEMEX retira producto</option>\n            <option value="3">Cliente retira producto de PEMEX</option>\n            <option value="4">Cliente retira producto Planta</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="formaCompra">Forma de compra</label>\n          <select name="formaCompra" id="formaCompra">\n            <option value="1">Crédito</option>\n            <option value="2">Efectivo</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="tipoProducto">Tipo de producto</label>\n          <select name="tipoProducto" id="tipoProducto">\n            <option value="1">Diesel Automotriz PETROIL</option>\n            <option value="2">Gasolina PETROIL</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="cantidad">Cantidad</label>\n          <select name="cantidad" id="cantidad">\n            <option value="1">2700</option>\n            <option value="2">3500</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="cantidad">Comentarios</label>\n        <textarea name="comentarios" id="comentarios"></textarea>\n      </div>\n      <div class="center">\n          <button ion-button color="orange" type="submit" (click)="onclickDirecciones()">Generar Pedido Nuevo</button>\n      </div>\n    </form>\n  </ion-content>'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/pedido/pedido.html"*/,
+            selector: 'page-pedidos',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/pedidos/pedidos.html"*/'<!--\n  Generated template for the PedidosPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <div class="content_logo header">\n          <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n      </div>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-navbar>\n  </ion-header>\n  <ion-content padding id="pedidos">\n    <div class="center">\n      <label class="titulo1">JMS Data Services</label>\n      <label class="text1">+52 1 473 123 4567</label>\n      <label class="text1">consulta@jmsdataservices.com</label>\n    </div>\n    <div class="center">\n      <button ion-button color="orange" type="submit" (click)="onclickPedido()">\n        <ion-icon name="add"></ion-icon> Generar Pedido Nuevo\n      </button>\n    </div>\n    <div class="pedido_content clearfix">\n      <div class="s1">\n        <div>Fecha de Pedido</div>\n        <div class="linea"></div>\n        <div>\n          Lunes\n          13/01/20\n        </div>\n      </div>\n      <div class="s2">\n        <div class="content_kg">\n          <div class="txt1">Pedido #127</div>\n          <div class="txt3">27K Lt</div>\n        </div>\n      </div>\n      <div class="s3">\n        <img src="../../assets/imgs/diesel.png" alt="diesel" class="gas_img">\n        <div class="estado_txt">Pendiente</div>\n      </div>\n    </div>\n    <div class="pedido_content clearfix">\n      <div class="s1">\n        <div>Fecha de Pedido</div>\n        <div class="linea"></div>\n        <div>\n          Lunes\n          13/01/20\n        </div>\n      </div>\n      <div class="s2">\n        <div class="content_kg">\n          <div class="txt1">Pedido #126</div>\n          <div class="txt3">50K Lt</div>\n        </div>\n      </div>\n      <div class="s3">\n        <img src="../../assets/imgs/magna.png" alt="magna" class="gas_img">\n        <div class="estado_txt">Pendiente</div>\n      </div>\n    </div>\n    <div class="pedido_content clearfix">\n      <div class="s1">\n        <div>Fecha de Pedido</div>\n        <div class="linea"></div>\n        <div>\n          01/30/19\n          <br>\n          202 Lt\n        </div>\n      </div>\n      <div class="s2">\n        <div class="content_kg">\n          <div class="txt1">Pedido #125</div>\n          <div class="txt3">27K Lt</div>\n        </div>\n      </div>\n      <div class="s3">\n        <img src="../../assets/imgs/diesel.png" alt="diesel" class="gas_img">\n        <div class="estado_txt entregado">Etregado</div>\n      </div>\n    </div>\n    <div class="pedido_content clearfix">\n      <div class="s1">\n        <div>Fecha de Pedido</div>\n        <div class="linea"></div>\n        <div>\n          01/30/19\n          <br>\n          0 Lt\n        </div>\n      </div>\n      <div class="s2">\n        <div class="content_kg">\n          <div class="txt1">Pedido #124</div>\n          <div class="txt3">300 Lt</div>\n        </div>\n      </div>\n      <div class="s3">\n        <img src="../../assets/imgs/premium.png" alt="premium" class="gas_img">\n        <div class="estado_txt cancelado">Cancelado</div>\n      </div>\n    </div>\n    <div class="pedido_content clearfix">\n        <div class="s1">\n          <div>Fecha de Pedido</div>\n          <div class="linea"></div>\n          <div>\n            Lunes\n            13/01/20\n          </div>\n        </div>\n        <div class="s2">\n          <div class="content_kg">\n            <div class="txt1">Pedido #127</div>\n            <div class="txt3">27K Lt</div>\n          </div>\n        </div>\n        <div class="s3">\n          <img src="../../assets/imgs/diesel.png" alt="diesel" class="gas_img">\n          <div class="estado_txt entregado">Entregado</div>\n        </div>\n      </div>\n  </ion-content>'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/pedidos/pedidos.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], PedidoPage);
-    return PedidoPage;
+    ], PedidosPage);
+    return PedidosPage;
 }());
 
-//# sourceMappingURL=pedido.js.map
+//# sourceMappingURL=pedidos.js.map
 
 /***/ })
 

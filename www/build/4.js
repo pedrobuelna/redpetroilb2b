@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 274:
+/***/ 272:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedidoPageModule", function() { return PedidoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DireccionPageModule", function() { return DireccionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedido__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__direccion__ = __webpack_require__(278);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PedidoPageModule = /** @class */ (function () {
-    function PedidoPageModule() {
+var DireccionPageModule = /** @class */ (function () {
+    function DireccionPageModule() {
     }
-    PedidoPageModule = __decorate([
+    DireccionPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__pedido__["a" /* PedidoPage */],
+                __WEBPACK_IMPORTED_MODULE_2__direccion__["a" /* DireccionPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedido__["a" /* PedidoPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__direccion__["a" /* DireccionPage */]),
             ],
         })
-    ], PedidoPageModule);
-    return PedidoPageModule;
+    ], DireccionPageModule);
+    return DireccionPageModule;
 }());
 
-//# sourceMappingURL=pedido.module.js.map
+//# sourceMappingURL=direccion.module.js.map
 
 /***/ }),
 
-/***/ 275:
+/***/ 278:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedidoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DireccionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,29 +57,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the PedidoPage page.
+ * Generated class for the DireccionPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var PedidoPage = /** @class */ (function () {
-    function PedidoPage(navCtrl, navParams) {
+var DireccionPage = /** @class */ (function () {
+    function DireccionPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    PedidoPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad PedidoPage');
+    DireccionPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DireccionPage');
     };
-    PedidoPage = __decorate([
+    DireccionPage.prototype.onclickMisDatos = function () {
+        this.navCtrl.setRoot("MisdatosPage", null, { direction: "back", animate: true });
+        //this.navCtrl.push("MisdatosPage");
+    };
+    DireccionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-pedido',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/pedido/pedido.html"*/'<!--\n  Generated template for the PedidoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <div class="content_logo header">\n          <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n      </div>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-navbar>\n  </ion-header>\n<ion-content padding id="pedido">\n    <div class="center">\n        <label class="titulo1">JMS Data Services</label>\n        <label class="text1">+52 1 473 123 4567</label>\n        <label class="text1">consulta@jmsdataservices.com</label>\n        <label class="titulo2">Pedido Nuevo</label>\n    </div>\n    <form action="" id="pedidoForm" name="pedidoForm">\n          <ion-row class="ion-justify-content-start">\n            <label for="fechaSurtido">Fecha y hora de surtido de pedido</label>\n            <ion-col size="2">\n              <div>\n                  <input type="date" id="fechaSurtido">\n              </div>\n            </ion-col>\n            <ion-col size="2">\n              <div>\n                  <input type="time" id="horaSurtido">\n              </div>\n            </ion-col>\n          </ion-row>\n      \n      <div class="input_content">\n        <label for="estacion">Estación de servicio</label>\n          <select name="estacion" id="estacion">\n            <option value="1">Estacion 123</option>\n            <option value="2">Estacion 456</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="formaEntrega">Forma de entrega</label>\n          <select name="formaEntrega" id="formaEntrega">\n            <option value="1">PETROIL retira producto</option>\n            <option value="2">PEMEX retira producto</option>\n            <option value="3">Cliente retira producto de PEMEX</option>\n            <option value="4">Cliente retira producto Planta</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="formaCompra">Forma de compra</label>\n          <select name="formaCompra" id="formaCompra">\n            <option value="1">Crédito</option>\n            <option value="2">Efectivo</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="tipoProducto">Tipo de producto</label>\n          <select name="tipoProducto" id="tipoProducto">\n            <option value="1">Diesel Automotriz PETROIL</option>\n            <option value="2">Gasolina PETROIL</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="cantidad">Cantidad</label>\n          <select name="cantidad" id="cantidad">\n            <option value="1">2700</option>\n            <option value="2">3500</option>\n          </select>\n      </div>\n      <div class="input_content">\n        <label for="cantidad">Comentarios</label>\n        <textarea name="comentarios" id="comentarios"></textarea>\n      </div>\n      <div class="center">\n          <button ion-button color="orange" type="submit" (click)="onclickDirecciones()">Generar Pedido Nuevo</button>\n      </div>\n    </form>\n  </ion-content>'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/pedido/pedido.html"*/,
+            selector: 'page-direccion',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/direccion/direccion.html"*/'<!--\n  Generated template for the DireccionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--\n  Generated template for the DireccionesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!--\n  Generated template for the PedidoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <div class="content_logo header">\n          <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n      </div>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-navbar>\n  </ion-header>\n<ion-content padding id="direccion">\n    <div class="center">\n        <label class="titulo1">JMS Data Services</label>\n        <label class="text1">+52 1 473 123 4567</label>\n        <label class="text1">consulta@jmsdataservices.com</label>\n    </div>\n    <br>\n    <label class="titulo1">Dirección #1</label>\n    <br><br>\n    <form action="" id="direccionForm" name="direccionForm">\n        <!-- <form action="" [formGroup]="formgroup" id="login" name="login"> -->\n        <div class="input_content">\n          <label for="descripcion">Descripción de la dirección</label>\n          <input type="text" id="descripcion" name="descripcion" required>\n          <!-- <input type="text" id="descrpcion" formControlName="descrpcion" required> -->\n          <!-- <span class="error1" *ngIf="descrpcion.hasError(\'required\') && descrpcion.touched">* Rellene el Campo</span>\n          <span class="error1" *ngIf="descrpcion.hasError(\'minlength\') && descrpcion.touched ">* 10 Caractéres minimo</span> -->\n        </div>\n        <div class="input_content">\n          <label for="nombre">Nombre del Contacto</label>\n          <input type="text" id="nombre" name="nombre" required>\n          <!-- <input type="text" id="nombre" formControlName="nombre" required> -->\n          <!-- <img src="../../assets/imgs/ver_input.png" alt="ver" class="ver" (click)="onclickVerPassword()"> -->\n          <!-- <img src="../../assets/imgs/ver_input.png" alt="ver" class="ver"> -->\n          <!-- <span class="error1" *ngIf="nombre.hasError(\'required\') && nombre.touched ">* Rellene el Campo</span>\n          <span class="error1" *ngIf="nombre.hasError(\'minlength\') && nombre.touched ">* 5 Caractéres minimo</span> -->\n        </div>\n        <div class="input_content">\n          <label for="telefono">Teléfono</label>\n          <input type="number" id="telefono" name="telefono" required>\n        </div>\n        <div class="input_content">\n          <label for="direccionFacturacion">Dirección de Facturación</label>\n          <input type="text" id="direccionFacturacion" name="direccionFacturacion" required>\n        </div>\n        <div class="input_content">\n          <label for="numeroExterior"># Exterior</label>\n          <input type="number" id="numeroExterior" name="numeroExterior" required>\n        </div>\n        <div class="input_content">\n          <label for="numeroInterior"># Interior</label>\n          <input type="number" id="numeroInterior" name="numeroInterior" required>\n        </div>\n        <div class="input_content">\n          <label for="colonia">Colonia</label>\n          <input type="text" id="colonia" name="colonia" required>\n        </div>\n        <div class="input_content">\n          <label for="cp">Codigo Postal</label>\n          <input type="number" id="cp" name="cp" required>\n        </div>\n        <div class="input_content">\n          <label for="localidad">Localidad</label>\n          <input type="text" id="localidad" name="localidad" required>\n        </div>\n        <div class="input_content">\n          <label for="ciudad">Ciudad</label>\n          <input type="text" id="ciudad" name="ciudad" required>\n        </div>\n        <div class="input_content">\n          <label for="estado">Estado</label>\n          <input type="text" id="estado" name="estado" required>\n        </div>\n        <div class="center">\n            <button ion-button color="orange" type="submit" (click)="onclickMisDatos()">Agregar Dirección</button>\n        </div>\n      </form>\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/direccion/direccion.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], PedidoPage);
-    return PedidoPage;
+    ], DireccionPage);
+    return DireccionPage;
 }());
 
-//# sourceMappingURL=pedido.js.map
+//# sourceMappingURL=direccion.js.map
 
 /***/ })
 
