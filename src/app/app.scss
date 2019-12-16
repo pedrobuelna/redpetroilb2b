@@ -264,4 +264,104 @@ img.ver {
     vertical-align: middle;
     padding: 6px 0;
     box-sizing: border-box;}
-    #direcciones button{margin: 30px 0 40px 0;}
+#direcciones button{margin: 30px 0 40px 0;}
+//gracias
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+.titulo3{
+    font-size: 38px;
+    color: #0B3B61;
+    font-weight: 500;
+    width: calc(100% - 36px);
+    box-sizing: border-box;
+}
+//alerta
+.icono_alerta {
+    position: absolute;
+    width: 18px;
+    right: 50px;
+    top: 12px;
+}
+.caja1 {
+    background: #F98E2B;
+    height: 69px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 69px;
+    margin-top: 30px;
+}
+.contenedor_avisos {
+    background: #0B3B61;
+    height: 41px;
+    padding: 0 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+.contenedor_avisos .aviso1:first-child{margin-left: 0;}
+.aviso1 {
+    width: 15%;
+    vertical-align: middle;
+    padding-top: 8px;
+    margin-left: 13.3%;float: left;
+}
+.color {
+    height: 10px;
+    background: #E36C6C;
+}
+.contenedor_alertas_indice{
+    margin-bottom: 50px;
+}
+.contenedor_avisos .aviso1:nth-child(2) .color{
+    background: #F5F06C;
+}
+.contenedor_avisos .aviso1:nth-child(3) .color{
+    background: #ACE36C;
+}
+.contenedor_avisos .aviso1:nth-child(4) .color{
+    background: #6CDAE3;
+}
+.txtaviso {
+    color: white;margin-top: 3px;
+}
+.row_alertas {
+    border-top: 2px solid #707070;
+    height: 80px;display: table;
+    width: 100%;
+}
+.row_content {
+    border-left: 15px solid #ACE36C;
+    height: 100%;padding-left: 15px;    vertical-align: middle;
+    display: table-cell;
+}
+
+.content_rows_alertas .row_alertas:last-child {border-bottom: 2px solid #707070;}
+
+.txt4{
+    font-size: 20px;
+    font-weight: 500;
+    color: #0B3B61;
+}
+.alerta{
+    border-left:15px solid #E36C6C;
+}
+.aviso{
+    border-left:15px solid #F5F06C;
+}
+.info{
+    border-left:15px solid #6CDAE3;
+}
+.numberAviso{
+    position: absolute;
+    color: #E36C6C;
+    right: 44px;
+    top: 12px;
+    font-size: 9px;
+}
