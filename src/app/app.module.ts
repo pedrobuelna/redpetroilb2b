@@ -1,3 +1,4 @@
+import { PedidoPage } from './../pages/pedido/pedido';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -15,7 +16,8 @@ import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
     MyApp,
     HomePage,
     ListPage,
-    LoginPage
+    LoginPage,
+    PedidoPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
     MyApp,
     HomePage,
     ListPage,
-    LoginPage
+    LoginPage,
+    PedidoPage
   ],
   providers: [
     StatusBar,

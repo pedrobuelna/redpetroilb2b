@@ -21,3 +21,5 @@ export const SUBSERVICE_CATALOG_PAGE = 'SubserviceCatalogPage';
 export const ACTIVITIES_MENU_PAGE = 'ActivitiesMenuPage';
 export const ACTIVITIES_MENU_DETAILS_PAGE = 'ActivitiesMenuDetailsPage';
 export const CALENDARIO2_PAGE = 'Calendario2Page';
+export const LISTADO_PEDIDOS_PAGE = 'ListadoPedidosPage';
+export const SALDOS_ESTADISTICAS_PAGE = 'SaldosEstadisticasPage';

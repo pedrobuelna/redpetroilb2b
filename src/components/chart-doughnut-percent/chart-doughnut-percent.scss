@@ -1,0 +1,28 @@
+chart-doughnut-percent {
+    display: block;
+    .container-chart-dout {
+        position: relative;
+        .container-chart-dout-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            top: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 5px;
+            .text-value {
+                font-size: 1.2rem;
+                &.first {
+                    color: #0b3a61;
+                    text-align: center;
+                }
+                &.second {
+                    color: #f98f2b;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

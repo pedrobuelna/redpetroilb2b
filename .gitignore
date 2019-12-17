@@ -67,3 +67,4 @@ core/loader/
 core/www/
 .stencil/
 angular/build/
+www/

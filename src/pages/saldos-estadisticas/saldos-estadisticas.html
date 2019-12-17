@@ -1,0 +1,29 @@
+<!--
+  Generated template for the SaldosEstadisticasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>saldos-estadisticas</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-grid no-margin no-padding>
+        <ion-row>
+            <ion-col col-6>
+                <chart-doughnut-percent
+                    title="Saldo"
+                    subtitle="Crédito"></chart-doughnut-percent>
+            </ion-col>
+            <ion-col col-6>
+                <chart-doughnut-percent
+                    title="Saldo"
+                    subtitle="Saldos vencidos"
+                    [dataInputs]="dataInput2"></chart-doughnut-percent>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <canvas height="220" id="canvas"></canvas>
+</ion-content>
