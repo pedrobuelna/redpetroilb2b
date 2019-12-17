@@ -28248,7 +28248,8 @@ img.ver {
 
 #pedidoForm button,
 #direcciones button,
-#pedidos button {
+#pedidos button,
+#graficas button {
   height: 69px;
   font-size: 20px !important;
   font-weight: 500;
@@ -28262,7 +28263,9 @@ img.ver {
   margin-bottom: 30px;
 }
 
-#pedidos .icon-ios, #pedidos .ion-ios-add, #direcciones .icon-ios, #direcciones .ion-ios-add {
+#pedidos .icon-ios, #pedidos .ion-ios-add,
+#direcciones .icon-ios, #direcciones .ion-ios-add,
+#graficas .icon-ios, #graficas .ion-ios-add {
   margin-right: 16px;
   font-size: 65px;
 }
@@ -28496,4 +28499,148 @@ img.ver {
   right: 44px;
   top: 12px;
   font-size: 9px;
+}
+
+#graficas button {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.content_text1_grafica {
+  color: #0B3B61;
+  text-align: center;
+}
+
+.texto1G {
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.texto2G {
+  font-size: 10px;
+}
+
+.content_texto2G {
+  display: inline-block;
+  line-height: 9px;
+}
+
+.division {
+  border-bottom: 2px solid #707070;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.content_fecha_hora {
+  color: #0B3B61;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.content_fecha_hora span:first-child {
+  float: left;
+}
+
+.content_fecha_hora span:last-child {
+  float: right;
+}
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.box_pedido_content {
+  background: #FF6D10;
+  padding: 20px 10px 10px;
+  text-align: center;
+  position: relative;
+  color: #0B3B61;
+  margin-bottom: 2px;
+  height: 198px;
+  overflow: hidden;
+}
+
+.tipo_gas_img {
+  width: 121px;
+  margin-bottom: 15px;
+}
+
+.menu_pedido {
+  position: absolute;
+  right: 10px;
+  top: 27px;
+}
+
+.content_txt2 {
+  margin-top: 10px;
+}
+
+.texto3G {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.box_pedido_content:nth-of-type(odd) {
+  background: #F98E2B;
+}
+
+.active {
+  background: white;
+  padding-left: 0;
+  padding-right: 0;
+  height: auto;
+}
+
+#graficas .box_pedido_content .icon-ios, #graficas .box_pedido_content .ion-ios-add {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.content_grafica_barras {
+  position: relative;
+  left: 0;
+  width: 44px;
+  margin-top: 20px;
+}
+
+.contenido_precios_litro {
+  text-align: left;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+}
+
+.tipo_gasgrafica {
+  width: 121px;
+  margin-right: 10px;
+}
+
+.content_tabla_litros {
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.content_tabla_litros table {
+  width: 100%;
+}
+
+.content_tabla_litros > div {
+  display: table-cell;
 }
