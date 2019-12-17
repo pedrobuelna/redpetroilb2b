@@ -23,3 +23,7 @@ export const ACTIVITIES_MENU_DETAILS_PAGE = 'ActivitiesMenuDetailsPage';
 export const CALENDARIO2_PAGE = 'Calendario2Page';
 export const LISTADO_PEDIDOS_PAGE = 'ListadoPedidosPage';
 export const SALDOS_ESTADISTICAS_PAGE = 'SaldosEstadisticasPage';
+export const DIRECCIONES_PAGE = 'DireccionesPage';
+export const DIRECCION_PAGE = 'DireccionPage';
+export const MISDATOS_PAGE = 'MisdatosPage';
+export const PEDIDOS_PAGE = 'PedidosPage';

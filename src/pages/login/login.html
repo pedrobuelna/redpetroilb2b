@@ -29,6 +29,7 @@
       <div class="input_content">
         <label for="password">Contraseña</label>
         <input type="password" id="password" formControlName="password" required>
+        <img src="../../assets/imgs/ver_input.png" alt="ver" class="ver" (click)="onclickVerPassword()">
         <span class="error1" *ngIf="password.hasError('required') && password.touched ">* Rellene el Campo</span>
         <span class="error1" *ngIf="password.hasError('minlength') && password.touched ">* 5 Caractéres minimo</span>
       </div>

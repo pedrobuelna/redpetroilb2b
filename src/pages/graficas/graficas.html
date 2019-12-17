@@ -1,0 +1,168 @@
+<!--
+  Generated template for the GraficasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <div class="content_logo header">
+        <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
+    </div>
+    <img src="../../assets/imgs/icono_alerta.png" alt="alerta_icono" class="icono_alerta">
+    <div class="numberAviso">10</div>
+    <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="graficas">
+  <div class="center">
+      <label class="titulo1">JMS Data Services</label>
+      <label class="text1">+52 1 473 123 4567</label>
+      <label class="text1">consulta@jmsdataservices.com</label>
+  </div>
+  <div class="center">
+      <button ion-button color="orange" type="submit" (click)="onclickDireccion()"><ion-icon name="add"></ion-icon>Generar Pedido Nuevo</button>
+  </div>
+  <div class="content_text1_grafica">
+    <div class="content_txt1">
+      <span class="texto1G">Saldo Total: $778/</span>
+      <div class="content_texto2G">
+        <span class="texto2G">Credito</span> <br>
+        <span class="texto2G">40,000</span> <br>
+      </div>
+      <span class="texto1G">Descuento: $0 /litro</span> <br>
+      <span class="texto1G">Corte en 30 días</span>
+    </div>
+  </div>
+  <img src="../../assets/imgs/graficas.png" alt="graficas" style="width: 100%;margin:auto;display: block;margin-top: 15px;">
+  <div class="division"></div>
+  <div class="content_fecha_hora clearfix">
+    <span>Diciembre 24, 2019</span>
+    <span>4:20pm</span>
+  </div>
+  <div class="box_pedido_content active">
+    <div class="content_menu_pedido">
+        <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gas_img">
+        <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido" (click)="onclickActive()">
+    </div>
+    <div class="content_txt1">
+        <span class="texto1G">Precios: Litro/litro</span> <br>
+        <span class="texto1G">MXN 21.150 / 80.061</span>
+    </div>
+    <div class="content_txt2">
+        <span class="texto3G">USD 1.081 / 4.092</span> <br>
+        <span class="texto3G">EUR 0.977 / 3.698</span>
+    </div>
+    <div class="content_grafica_barras">
+      <ion-icon name="add"></ion-icon>
+      <ion-icon name="remove"></ion-icon>
+    </div>
+    <img src="../../assets/imgs/graficas_barras.png" alt="graficas_barras">
+    <div class="contenido_precios_litro">
+      <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gasgrafica">
+      <div class="content_tabla_litros">
+        <table>
+          <thead>
+            <th>Precios Litro</th>
+            <th align="center">Galon</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MXN 21.150</td>
+              <td align="center">80.061</td> 
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+  <div class="box_pedido_content">
+    <div class="content_menu_pedido">
+        <img src="../../assets/imgs/magna.png" alt="magna" class="tipo_gas_img">
+        <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
+    </div>
+    <div class="content_txt1">
+        <span class="texto1G">Precios: Litro/litro</span> <br>
+        <span class="texto1G">MXN 21.150 / 80.061</span>
+    </div>
+    <div class="content_txt2">
+        <span class="texto3G">USD 1.081 / 4.092</span> <br>
+        <span class="texto3G">EUR 0.977 / 3.698</span>
+    </div>
+    <div class="content_grafica_barras">
+      <ion-icon name="add"></ion-icon>
+      <ion-icon name="remove"></ion-icon>
+    </div>
+  </div>
+  <div class="box_pedido_content">
+    <div class="content_menu_pedido">
+        <img src="../../assets/imgs/premium.png" alt="premium" class="tipo_gas_img">
+        <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
+    </div>
+    <div class="content_txt1">
+        <span class="texto1G">Precios: Litro/litro</span> <br>
+        <span class="texto1G">MXN 21.150 / 80.061</span>
+    </div>
+    <div class="content_txt2">
+        <span class="texto3G">USD 1.081 / 4.092</span> <br>
+        <span class="texto3G">EUR 0.977 / 3.698</span>
+    </div>
+    <div class="content_grafica_barras">
+        <ion-icon name="add"></ion-icon>
+    </div>
+  </div>
+  <div class="box_pedido_content">
+    <div class="content_menu_pedido">
+        <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gas_img">
+        <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
+    </div>
+    <div class="content_txt1">
+        <span class="texto1G">Precios: Litro/litro</span> <br>
+        <span class="texto1G">MXN 21.150 / 80.061</span>
+    </div>
+    <div class="content_txt2">
+        <span class="texto3G">USD 1.081 / 4.092</span> <br>
+        <span class="texto3G">EUR 0.977 / 3.698</span>
+    </div>
+    <div class="content_grafica_barras">
+        <ion-icon name="add"></ion-icon>
+    </div>
+  </div>
+  <div class="box_pedido_content">
+      <div class="content_menu_pedido">
+          <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gas_img">
+          <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
+      </div>
+      <div class="content_txt1">
+          <span class="texto1G">Precios: Litro/litro</span> <br>
+          <span class="texto1G">MXN 21.150 / 80.061</span>
+      </div>
+      <div class="content_txt2">
+          <span class="texto3G">USD 1.081 / 4.092</span> <br>
+          <span class="texto3G">EUR 0.977 / 3.698</span>
+      </div>
+      <div class="content_grafica_barras">
+          <ion-icon name="add"></ion-icon>
+      </div>
+    </div>
+    <div class="box_pedido_content">
+        <div class="content_menu_pedido">
+            <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gas_img">
+            <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
+        </div>
+        <div class="content_txt1">
+            <span class="texto1G">Precios: Litro/litro</span> <br>
+            <span class="texto1G">MXN 21.150 / 80.061</span>
+        </div>
+        <div class="content_txt2">
+            <span class="texto3G">USD 1.081 / 4.092</span> <br>
+            <span class="texto3G">EUR 0.977 / 3.698</span>
+        </div>
+        <div class="content_grafica_barras">
+            <ion-icon name="add"></ion-icon>
+        </div>
+      </div>
+</ion-content>

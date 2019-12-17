@@ -135,26 +135,46 @@ body {
     margin: auto;
     margin-bottom: 33px;
 }
-#login label{
+#login label,
+#direccion label,
+#misdatosForm label{
     font-size: 16px;
     font-weight: 500;
 }
-#login input {
+#direccionForm label,
+#misdatosForm label{
+    color: #0B3B61;
+}
+#login input,
+#direccionForm input,
+#misdatosForm input{
     width: 100%;
     height: 46px;
     border: none;
     border-bottom: 2px solid black;
     margin-bottom: 18px;
     font-size: 34px;
-    color: #0B3B61;
     text-align: center;
+}
+#direccionForm input,
+#misdatosForm input{
+    margin-bottom: 3px;
+}
+.input_content {
+    position: relative;
+}
+img.ver {
+    position: absolute;
+    right: 0;
+    width: 45px;
+    top: 26px;
 }
 .error1{color: red;font-size: 15px;margin-bottom: 18px;display: inline-block;}
 //pedido
 .content_logo.header .logo{
     max-width: 81px;
     max-height: 25px;
-    margin-left: 20px;
+    margin-left: 14px;
     margin-top: 10px;
 }
 .titulo1 {
@@ -169,7 +189,7 @@ body {
     color: #0B3B61;
     font-size: 13px !important;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 10px;font-weight: 500;
 }
 .titulo2 {
     display: block;
@@ -183,7 +203,6 @@ body {
     color: #0B3B61;
 }
 #pedidoForm label{font-weight: 600;margin-bottom: 15px;display: inline-block;}
-
 #pedidoForm input,
 #pedidoForm select,
 #pedidoForm textarea{
@@ -192,13 +211,204 @@ body {
     height: 31px;
     border-radius: 0;
     margin-bottom: 15px;
+    background-color:white;
+}
+#pedidoForm select{
+    background-image: url("../assets/imgs/arrow.png");
+    background-size: 10px;
+    background-position: right 10px center;
+
+    background-repeat: no-repeat;
 }
 #pedidoForm textarea{
     height: 145px;
 }
-#pedidoForm button{
+#pedidoForm button,
+#direcciones button,
+#pedidos button,
+#graficas button{
     height: 69px;
     font-size: 20px !important;
     font-weight: 500;
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
+#pedidos button{
+    margin-top: 20px;
+    margin-bottom:30px;
+}
+//Pedidos
+#pedidos .icon-ios, #pedidos .ion-ios-add,
+#direcciones .icon-ios, #direcciones .ion-ios-add,
+#graficas .icon-ios, #graficas .ion-ios-add{margin-right: 16px;font-size: 65px;}
+.pedido_content{margin-bottom: 35px;border: 1px solid #707070;height: 62px;vertical-align: middle;}
+.s1{float: left;width: 20%;font-size: 10px;text-align: center;color:#0B3B61;border-right: 1px solid #707070;margin-top: 3px;font-weight: 500;}
+.linea{border-bottom:1px solid #707070;margin: 3px 5px;}
+.s2{float: left;width: 44%;font-size: 13px;color: #0B3B61;font-weight: 500;}
+.txt1{margin-top: 5px;}
+.content_kg{margin: 2px 0 0 10px;}
+.gas_img{width: 100%; display: block;}
+.txt3{font-size: 30px;font-weight: 500;color: #0B3B61;}
+.s3{float: left;width: 36%;}
+.estado_txt{height: 29px;background: #F2C69E;text-align: center;font-size: 16px;vertical-align: middle;font-weight: 500;line-height: 28px;}
+.entregado{background: #B5F29E;}
+.cancelado{background: #E36C6C;}
+.img_direcciones{max-width: 34px;margin-left: 10px;}
+.txt2{color: #0B3B61;font-size: 13px !important;font-weight: 500;}
+.content_direcciones {
+    display: inline-block;
+    vertical-align: sub;margin-left: 10px;
+}
+#direcciones .pedido_content {
+    margin-bottom: 35px;
+    border: 1px solid #707070;
+    height: 62px;
+    vertical-align: middle;
+    padding: 6px 0;
+    box-sizing: border-box;}
+#direcciones button{margin: 30px 0 40px 0;}
+//gracias
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+.titulo3{
+    font-size: 38px;
+    color: #0B3B61;
+    font-weight: 500;
+    width: calc(100% - 36px);
+    box-sizing: border-box;
+}
+//alerta
+.icono_alerta {
+    position: absolute;
+    width: 18px;
+    right: 50px;
+    top: 12px;
+}
+.caja1 {
+    background: #F98E2B;
+    height: 69px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 69px;
+    margin-top: 30px;
+}
+.contenedor_avisos {
+    background: #0B3B61;
+    height: 41px;
+    padding: 0 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+.contenedor_avisos .aviso1:first-child{margin-left: 0;}
+.aviso1 {
+    width: 15%;
+    vertical-align: middle;
+    padding-top: 8px;
+    margin-left: 13.3%;float: left;
+}
+.color {
+    height: 10px;
+    background: #E36C6C;
+}
+.contenedor_alertas_indice{
+    margin-bottom: 50px;
+}
+.contenedor_avisos .aviso1:nth-child(2) .color{
+    background: #F5F06C;
+}
+.contenedor_avisos .aviso1:nth-child(3) .color{
+    background: #ACE36C;
+}
+.contenedor_avisos .aviso1:nth-child(4) .color{
+    background: #6CDAE3;
+}
+.txtaviso {
+    color: white;margin-top: 3px;
+}
+.row_alertas {
+    border-top: 2px solid #707070;
+    height: 80px;display: table;
+    width: 100%;
+}
+.row_content {
+    border-left: 15px solid #ACE36C;
+    height: 100%;padding-left: 15px;    vertical-align: middle;
+    display: table-cell;
+}
+
+.content_rows_alertas .row_alertas:last-child {border-bottom: 2px solid #707070;}
+
+.txt4{
+    font-size: 20px;
+    font-weight: 500;
+    color: #0B3B61;
+}
+.alerta{
+    border-left:15px solid #E36C6C;
+}
+.aviso{
+    border-left:15px solid #F5F06C;
+}
+.info{
+    border-left:15px solid #6CDAE3;
+}
+.numberAviso{
+    position: absolute;
+    color: #E36C6C;
+    right: 44px;
+    top: 12px;
+    font-size: 9px;
+}
+//graficas
+#graficas button{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.content_text1_grafica{
+    color: #0B3B61;text-align: center;
+}
+.texto1G{
+    font-size: 20px;
+    font-weight: 500;display: inline-block;
+}
+.texto2G{font-size: 10px;}
+.content_texto2G {
+    display: inline-block;
+    line-height: 9px;
+}
+.division{border-bottom: 2px solid #707070;margin: 10px 0;width: 100%;}
+.content_fecha_hora{color:#0B3B61;font-size: 13px;font-weight: 500;margin-bottom: 10px;}
+.content_fecha_hora span:first-child{float: left;}
+.content_fecha_hora span:last-child{float: right;}
+.clearfix:after{content: '.';display: block;height: 0;clear: both;visibility: hidden;}
+.box_pedido_content{background: #FF6D10;padding: 20px 10px 10px;text-align: center;position: relative;color: #0B3B61;margin-bottom: 2px;height: 198px;overflow: hidden;}
+.tipo_gas_img{width: 121px;margin-bottom: 15px;}
+.menu_pedido{position: absolute;right: 10px;top: 27px;}
+.content_txt2{margin-top: 10px;}
+.texto3G{font-size: 30px;font-weight: 500;line-height: 30px;}
+.box_pedido_content:nth-of-type(odd){
+    background: #F98E2B;
+}
+.active{background: white;padding-left: 0;padding-right: 0; height: auto;}
+#graficas .box_pedido_content .icon-ios, #graficas .box_pedido_content .ion-ios-add{
+    font-size: 25px;margin-right: 5px;
+}
+.content_grafica_barras {
+    position: relative;
+    left: 0;
+    width: 44px;margin-top: 20px;
+}
+.contenido_precios_litro{text-align: left;align-items: center;display: flex;justify-content: left;}
+.tipo_gasgrafica{width: 121px;margin-right: 10px;}
+.content_tabla_litros{font-size: 20px;font-weight: 500;width: 100%;}
+.content_tabla_litros table{width: 100%;}
+.content_tabla_litros > div{display: table-cell;}

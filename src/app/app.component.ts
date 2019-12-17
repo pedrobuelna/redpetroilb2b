@@ -1,3 +1,6 @@
+import { REGISTRO_PAGE,LOGIN_PAGE,PEDIDO_NUEVO,DIRECCIONES_PAGE,DIRECCION_PAGE,MISDATOS_PAGE,PEDIDOS_PAGE  } from './../pages/pages.constants';
+ 
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -6,11 +9,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { PedidosPage } from '../pages/pedidos/pedidos';
+import { MisdatosPage } from '../pages/misdatos/misdatos';
 
-
-
-
+import { DireccionesPage } from '../pages/direcciones/direcciones';
 import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -28,9 +32,9 @@ export class MyApp {
     this.pages = [
       { title: 'Inicio', component: HomePage },
       // { title: 'List', component: ListPage }
-      { title: 'Pedir Producto', component: HomePage },
-      { title: 'Mis Datos', component: HomePage },
-      { title: 'Mis Pedidos', component: HomePage },
+      { title: 'Pedir Producto', component: PEDIDO_NUEVO },
+      { title: 'Mis Datos', component: MISDATOS_PAGE },
+      { title: 'Mis Pedidos', component: PEDIDOS_PAGE },
       { title: 'Preferencias', component: HomePage },
       { title: 'Estado de Cuenta', component: HomePage }
     ];

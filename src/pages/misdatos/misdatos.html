@@ -1,0 +1,97 @@
+<!--
+  Generated template for the MisdatosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <div class="content_logo header">
+          <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
+      </div>
+      <button ion-button menuToggle right>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding id="misdatos">
+    <div class="center">
+        <label class="titulo1">JMS Data Services</label>
+        <label class="text1">+52 1 473 123 4567</label>
+        <label class="text1">consulta@jmsdataservices.com</label>
+    </div>
+    <br>
+    <label class="titulo1" style="width:auto">Mis Datos</label>
+    <img src="../../assets/imgs/editar.png" alt="editar" style="float: right;">
+    <br><br>
+    <form action="" id="misdatosForm" name="misdatosForm">
+        <!-- <form action="" [formGroup]="formgroup" id="login" name="login"> -->
+        <div class="input_content">
+          <label for="razonsocial">Razón Social</label>
+          <input type="text" id="razonsocial" name="razonsocial" required>
+          <!-- <input type="text" id="descrpcion" formControlName="descrpcion" required> -->
+          <!-- <span class="error1" *ngIf="descrpcion.hasError('required') && descrpcion.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="descrpcion.hasError('minlength') && descrpcion.touched ">* 10 Caractéres minimo</span> -->
+        </div>
+        <div class="input_content">
+          <label for="direccionFacturacion">Dirección de Facturación</label>
+          <input type="text" id="direccionFacturacion" name="direccionFacturacion" required>
+        </div>
+        <div class="input_content">
+          <label for="numeroExterior"># Exterior</label>
+          <input type="number" id="numeroExterior" name="numeroExterior" required>
+        </div>
+        <div class="input_content">
+          <label for="numeroInterior"># Interior</label>
+          <input type="number" id="numeroInterior" name="numeroInterior" required>
+        </div>
+        <div class="input_content">
+          <label for="colonia">Colonia</label>
+          <input type="text" id="colonia" name="colonia" required>
+        </div>
+        <div class="input_content">
+          <label for="cp">Codigo Postal</label>
+          <input type="number" id="cp" name="cp" required>
+        </div>
+        <div class="input_content">
+          <label for="localidad">Localidad</label>
+          <input type="text" id="localidad" name="localidad" required>
+        </div>
+        <div class="input_content">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad" required>
+        </div>
+        <div class="input_content">
+          <label for="estado">Estado</label>
+          <input type="text" id="estado" name="estado" required>
+        </div>
+        <div class="input_content">
+          <label for="rfc">RFC</label>
+          <input type="text" id="rfc" name="rfc" required>
+        </div>
+        <div class="input_content">
+          <label for="mailFacturacion">Mail de Facturación</label>
+          <input type="email" id="mailFacturacion" name="mailFacturacion" required>
+        </div>
+        <div class="input_content">
+          <label for="nombreUsuario">Nombre del Usuario</label>
+          <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+        </div>
+        <div class="input_content">
+          <label for="mailUsuario">Mail del Usuario</label>
+          <input type="email" id="mailUsuario" name="mailUsuario" required>
+        </div>
+        <div class="input_content">
+          <label for="celularUsuario">Celular del Usuario</label>
+          <input type="number" id="celularUsuario" name="celularUsuario" required>
+        </div>
+        <div class="input_content">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" required>
+        </div>
+        <div class="center">
+            <button ion-button color="orange" type="submit" (click)="onclickDatos()">Agregar Datos</button>
+        </div>
+      </form>
+    
+  </ion-content>

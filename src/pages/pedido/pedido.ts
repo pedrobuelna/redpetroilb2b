@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import {DireccionesPage} from "../direcciones/direcciones";
 /**
  * Generated class for the PedidoPage page.
  *
@@ -21,5 +21,8 @@ export class PedidoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PedidoPage');
   }
-
+  onclickDirecciones() {
+    this.navCtrl.setRoot("DireccionesPage",null,{direction:"back",animate:true})
+    //this.navCtrl.push("DireccionesPage");
+  }
 }

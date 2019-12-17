@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+webpackJsonp([9],{
 
 /***/ 109:
 /***/ (function(module, exports) {
@@ -21,12 +21,40 @@ webpackEmptyAsyncContext.id = 109;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/alertas/alertas.module": [
+		272,
+		7
+	],
+	"../pages/direccion/direccion.module": [
+		274,
+		6
+	],
+	"../pages/direcciones/direcciones.module": [
+		273,
+		5
+	],
+	"../pages/gracias/gracias.module": [
+		275,
+		4
+	],
+	"../pages/graficas/graficas.module": [
+		276,
+		3
+	],
 	"../pages/login/login.module": [
-		271,
-		1
+		277,
+		8
+	],
+	"../pages/misdatos/misdatos.module": [
+		279,
+		2
 	],
 	"../pages/pedido/pedido.module": [
-		272,
+		278,
+		1
+	],
+	"../pages/pedidos/pedidos.module": [
+		280,
 		0
 	]
 };
@@ -108,11 +136,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(261);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_global_vars_global_vars__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_global_vars_global_vars__ = __webpack_require__(271);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -144,8 +172,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/alertas/alertas.module#AlertasPageModule', name: 'AlertasPage', segment: 'alertas', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/direcciones/direcciones.module#DireccionesPageModule', name: 'DireccionesPage', segment: 'direcciones', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/direccion/direccion.module#DireccionPageModule', name: 'DireccionPage', segment: 'direccion', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/gracias/gracias.module#GraciasPageModule', name: 'GraciasPage', segment: 'gracias', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/graficas/graficas.module#GraficasPageModule', name: 'GraficasPage', segment: 'graficas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/pedido/pedido.module#PedidoPageModule', name: 'PedidoPage', segment: 'pedido', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/pedido/pedido.module#PedidoPageModule', name: 'PedidoPage', segment: 'pedido', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/misdatos/misdatos.module#MisdatosPageModule', name: 'MisdatosPage', segment: 'misdatos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedidos/pedidos.module#PedidosPageModule', name: 'PedidosPage', segment: 'pedidos', priority: 'low', defaultHistory: [] }
                     ]
                 }),
             ],
@@ -176,12 +211,13 @@ var AppModule = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_pages_constants__ = __webpack_require__(262);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -197,22 +233,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MyApp = /** @class */ (function () {
     function MyApp(platform, statusBar, splashScreen) {
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */];
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
-            { title: 'Inicio', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
+            { title: 'Inicio', component: __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */] },
             // { title: 'List', component: ListPage }
-            { title: 'Pedir Producto', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            { title: 'Mis Datos', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            { title: 'Mis Pedidos', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            { title: 'Preferencias', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-            { title: 'Estado de Cuenta', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] }
+            { title: 'Pedir Producto', component: __WEBPACK_IMPORTED_MODULE_0__pages_pages_constants__["c" /* PEDIDO_NUEVO */] },
+            { title: 'Mis Datos', component: __WEBPACK_IMPORTED_MODULE_0__pages_pages_constants__["a" /* MISDATOS_PAGE */] },
+            { title: 'Mis Pedidos', component: __WEBPACK_IMPORTED_MODULE_0__pages_pages_constants__["b" /* PEDIDOS_PAGE */] },
+            { title: 'Preferencias', component: __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */] },
+            { title: 'Estado de Cuenta', component: __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */] }
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -230,17 +267,17 @@ var MyApp = /** @class */ (function () {
         this.nav.setRoot(page.component);
     };
     MyApp.prototype.onclickPageLogin = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */], null, { direction: "back", animate: true });
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_login_login__["a" /* LoginPage */], null, { direction: "back", animate: true });
         //this.nav.push(LoginPage);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/app/app.html"*/'<ion-menu [content]="content" type="overlay">\n    <!-- <ion-header>\n        <ion-navbar>\n            <button ion-button menuToggle right>\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-navbar>\n    </ion-header> -->\n  <ion-icon name="close" menuToggle class="cerrar"></ion-icon>\n  <ion-content class="menu">\n    <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    <div class="center">\n        <button ion-button color="orange" menuToggle (click)="onclickPageLogin()" >Iniciar Sesión</button>\n    </div>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/app/app.html"*/'<ion-menu [content]="content" type="overlay">\n    <!-- <ion-header>\n        <ion-navbar>\n            <button ion-button menuToggle right>\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-navbar>\n    </ion-header> -->\n  <ion-icon name="close" menuToggle class="cerrar"></ion-icon>\n  <ion-content class="menu">\n    <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    <div class="center">\n        <button ion-button color="orange" menuToggle (click)="onclickPageLogin()" >Iniciar Sesión</button>\n    </div>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -249,7 +286,30 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 269:
+/***/ 262:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export REGISTRO_PAGE */
+/* unused harmony export LOGIN_PAGE */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PEDIDO_NUEVO; });
+/* unused harmony export DIRECCIONES_PAGE */
+/* unused harmony export DIRECCION_PAGE */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MISDATOS_PAGE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PEDIDOS_PAGE; });
+//Constants for getting type references
+var REGISTRO_PAGE = 'RegistroPage';
+var LOGIN_PAGE = 'LoginPage';
+var PEDIDO_NUEVO = 'PedidoPage';
+var DIRECCIONES_PAGE = 'DireccionesPage';
+var DIRECCION_PAGE = 'DireccionPage';
+var MISDATOS_PAGE = 'MisdatosPage';
+var PEDIDOS_PAGE = 'PedidosPage';
+//# sourceMappingURL=pages.constants.js.map
+
+/***/ }),
+
+/***/ 270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -306,7 +366,7 @@ var ListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 270:
+/***/ 271:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -409,14 +469,24 @@ var LoginPage = /** @class */ (function () {
         this.navCtrl.setRoot("PedidoPage", null, { direction: "back", animate: true });
         //this.navCtrl.push(PedidoPage);
     };
+    LoginPage.prototype.onclickVerPassword = function () {
+        var b = document.querySelector("#password");
+        if (b.getAttribute("type") == "text") {
+            b.setAttribute("type", "password");
+        }
+        else {
+            b.setAttribute("type", "text");
+        }
+    };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <!-- <ion-title>Home</ion-title> -->\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding id="login">\n    <!-- <h3>Ionic Menu Starter</h3> -->\n    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n    <div class="content_logo">\n        <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    </div>\n    <form action="" [formGroup]="formgroup" id="login" name="login">\n      <div class="input_content">\n        <label for="numeroCelular">Cuenta/Numero de Celular</label>\n        <input type="text" id="numeroCelular" formControlName="numeroCelular" required>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'required\') && numeroCelular.touched">* Rellene el Campo</span>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'minlength\') && numeroCelular.touched ">* 10 Caractéres minimo</span>\n      </div>\n      <div class="input_content">\n        <label for="password">Contraseña</label>\n        <input type="password" id="password" formControlName="password" required>\n        <span class="error1" *ngIf="password.hasError(\'required\') && password.touched ">* Rellene el Campo</span>\n        <span class="error1" *ngIf="password.hasError(\'minlength\') && password.touched ">* 5 Caractéres minimo</span>\n      </div>\n      <div class="center">\n          <button ion-button color="orange" type="submit" [disabled]="formgroup.invalid" (click)="onclickPagePedidoNuevo()">Iniciar Sesión</button>\n      </div>\n    </form>\n  </ion-content>\n  '/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar>\n      <button ion-button menuToggle right>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <!-- <ion-title>Home</ion-title> -->\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding id="login">\n    <!-- <h3>Ionic Menu Starter</h3> -->\n    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n    <div class="content_logo">\n        <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n    </div>\n    <form action="" [formGroup]="formgroup" id="login" name="login">\n      <div class="input_content">\n        <label for="numeroCelular">Cuenta/Numero de Celular</label>\n        <input type="text" id="numeroCelular" formControlName="numeroCelular" required>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'required\') && numeroCelular.touched">* Rellene el Campo</span>\n        <span class="error1" *ngIf="numeroCelular.hasError(\'minlength\') && numeroCelular.touched ">* 10 Caractéres minimo</span>\n      </div>\n      <div class="input_content">\n        <label for="password">Contraseña</label>\n        <input type="password" id="password" formControlName="password" required>\n        <img src="../../assets/imgs/ver_input.png" alt="ver" class="ver" (click)="onclickVerPassword()">\n        <span class="error1" *ngIf="password.hasError(\'required\') && password.touched ">* Rellene el Campo</span>\n        <span class="error1" *ngIf="password.hasError(\'minlength\') && password.touched ">* 5 Caractéres minimo</span>\n      </div>\n      <div class="center">\n          <button ion-button color="orange" type="submit" [disabled]="formgroup.invalid" (click)="onclickPagePedidoNuevo()">Iniciar Sesión</button>\n      </div>\n    </form>\n  </ion-content>\n  '/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
     ], LoginPage);
     return LoginPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=login.js.map
