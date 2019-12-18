@@ -348,15 +348,15 @@ img.ver {
 #pedidos .ion-md-add, #pedidos .ion-md-add,
 #direcciones .ion-md-add, #direcciones .ion-md-add,
 #graficas .ion-md-add{margin-right: 16px;font-size: 65px;}
-.pedido_content{margin-bottom: 35px;border: 1px solid #707070;height: 62px;vertical-align: middle;}
-.s1{float: left;width: 20%;font-size: 10px;text-align: center;color:#0B3B61;border-right: 1px solid #707070;margin-top: 3px;font-weight: 500;}
+.pedido_content{margin-bottom: 35px;border: 1px solid #707070;height: 62px;vertical-align: middle;display: flex;align-items: center;}
+.s1{width: 20%;font-size: 10px;text-align: center;color:#0B3B61;border-right: 1px solid #707070;margin-top: 3px;font-weight: 500;}
 .linea{border-bottom:1px solid #707070;margin: 3px 5px;}
-.s2{float: left;width: 44%;font-size: 13px;color: #0B3B61;font-weight: 500;}
+.s2{width: 44%;font-size: 13px;color: #0B3B61;font-weight: 500;}
 .txt1{margin-top: 5px;}
 .content_kg{margin: 2px 0 0 10px;}
 .gas_img{width: 100%; display: block;}
 .txt3{font-size: 30px;font-weight: 500;color: #0B3B61;}
-.s3{float: left;width: 36%;}
+.s3{width: 36%;}
 .estado_txt{height: 29px;background: #F2C69E;text-align: center;font-size: 16px;vertical-align: middle;font-weight: 500;line-height: 28px;}
 .entregado{background: #B5F29E;}
 .cancelado{background: #E36C6C;}

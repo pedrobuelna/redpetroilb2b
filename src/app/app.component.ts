@@ -1,4 +1,4 @@
-import {PEDIDO_NUEVO,MISDATOS_PAGE,PEDIDOS_PAGE,  } from './../pages/pages.constants';
+import {PEDIDO_NUEVO,MISDATOS_PAGE,PEDIDOS_PAGE } from './../pages/pages.constants';
  
 
 import { Component, ViewChild } from '@angular/core';

@@ -19,8 +19,7 @@ import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
     MyApp,
     HomePage,
     ListPage,
-    LoginPage,
-    PedidoPage
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -31,8 +30,7 @@ import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
     MyApp,
     HomePage,
     ListPage,
-    LoginPage,
-    PedidoPage
+    LoginPage
   ],
   providers: [
     StatusBar,
