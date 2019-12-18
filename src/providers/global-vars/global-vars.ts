@@ -27,4 +27,15 @@ export class GlobalVarsProvider {
         this._isIOS = v;
     }    
 
+
+    
+    private _logged : boolean = false;
+    public get logged() : boolean {
+        return this._logged;
+    }
+    public set logged(v : boolean) {
+        this._logged = v;
+    }
+        
+
 }

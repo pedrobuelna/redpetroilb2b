@@ -9,13 +9,53 @@
   <ion-icon name="close" menuToggle class="cerrar"></ion-icon>
   <ion-content class="menu">
     <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
+    <div *ngIf="globalVars.logged" class="container-contacto">
+        <div class="center">
+            <label [ngClass]="globalVars.logged ? 'cerrar-sesion' : ''" class="titulo1">JMS Data Services</label>
+            <label class="text1">+52 1 473 123 4567</label>
+            <label class="text1">consulta@jmsdataservices.com</label>
+        </div>
+    </div>
     <div class="center">
-        <button ion-button color="orange" menuToggle (click)="onclickPageLogin()" >Iniciar Sesión</button>
+        <button *ngIf="!globalVars.logged" ion-button color="orange" menuToggle (click)="onclickPageLogin()" >Iniciar Sesión</button>
+        <button *ngIf="globalVars.logged" class="cerrar-sesion-btn" ion-button color="orange" menuToggle (click)="onclickPageLogin()" >Cerrar sesión</button>
     </div>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
-      </button>
+      </button> -->
+      <ng-template ngFor let-page [ngForOf]="pages"> 
+        <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.subPageOffer" ion-item>
+            {{page?.title}}
+        </button>
+        <ng-container *ngIf="page?.subPage">
+            <button ion-item (click)="openSubMenu(page)">
+                {{page?.title}}
+            </button>
+            <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">
+                <button 
+                    menuClose
+                    ion-item 
+                    (click)="openPage(subPage)" 
+                    *ngFor="let subPage of page.subPage" 
+                    [ngClass]="page?.statusClassList"
+                    class="txtSubmenu">{{subPage?.title}}</button>
+            </ion-list>
+        </ng-container>
+        <!-- <ng-container *ngIf="page.subPageOffer">
+            <button (click)="openSubMenu(page)" ion-item class="content_offers1">
+                <span class="title_offers">{{page?.title}}</span>
+            </button>
+            <ion-list [style.height.px]="calculateHeightOffer(page)" [ngClass]="'submenu_content-' + page?.title + '-s ' + page?.statusClass" class="submenu_content submenu_content-offers">
+                <div *ngFor="let offer of page.subPageOffer" class="content_offers">
+                    <span class="txt2">{{offer?.title}}</span><br>
+                    <span class="txt4">
+                        {{offer?.description}}
+                    </span>
+                </div>
+            </ion-list>
+        </ng-container> -->
+    </ng-template>
     </ion-list>
   </ion-content>
 </ion-menu>

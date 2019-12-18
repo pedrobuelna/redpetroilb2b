@@ -9,11 +9,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 // import { ListPage } from '../pages/list/list';
  import { LoginPage } from '../pages/login/login';
+import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
 // import { PedidosPage } from '../pages/pedidos/pedidos';
 // import { MisdatosPage } from '../pages/misdatos/misdatos';
 
 // import { DireccionesPage } from '../pages/direcciones/direcciones';
 // import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
+import _ from "lodash";
 
 @Component({
   templateUrl: 'app.html'
@@ -23,9 +25,9 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: any;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,public globalVars: GlobalVarsProvider) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -33,7 +35,16 @@ export class MyApp {
       { title: 'Inicio', component: HomePage },
       // { title: 'List', component: ListPage }
       { title: 'Pedir Producto', component: PEDIDO_NUEVO },
-      { title: 'Mis Datos', component: MISDATOS_PAGE },
+      { title: 'Mis Datos +', component: MISDATOS_PAGE,
+                "statusClass" : "hide-menu", "subPage" : [
+                    {
+                        "title" : "Empresa"
+                    },
+                    {
+                        "title" : "Dirección de entrega"
+                    }
+                ]
+        },
       { title: 'Mis Pedidos', component: PEDIDOS_PAGE },
       { title: 'Preferencias', component: HomePage },
       { title: 'Estado de Cuenta', component: HomePage }
@@ -43,6 +54,8 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+        this.globalVars.isAndroid = this.platform.is("android");
+        this.globalVars.isIOS = this.platform.is("ios");
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
@@ -59,4 +72,42 @@ export class MyApp {
     this.nav.setRoot(LoginPage,null,{direction:"back",animate:true})
     //this.nav.push(LoginPage);
   }
+
+  public openSubMenu(page): void {
+    let statusClass = page.statusClass == "hide-menu" ? "" : "hide-menu";
+        _.map(this.pages, (item: any) => {
+            if (item.title == page.title) {
+                item.statusClass = statusClass;
+                if (statusClass == "hide-menu") {
+                    item.title = "Mis datos +"
+                }
+                else {
+                    item.title = "Mis datos -"
+                }
+            }
+        });
+    }
+
+    public calculateHeight(items): number {
+        console.log("items",items);
+        let buttonSize = 0;
+        if (this.globalVars.isAndroid) {
+            buttonSize = 70;
+        }
+        else if (this.globalVars.isIOS) {
+            buttonSize = 70;
+        }
+        return _.size(items) * buttonSize;
+    }
+
+    public calculateHeightOffer(page): number {
+        let pageElement = document.querySelector(".submenu_content-"+page.title+"-s");
+        let contentOffers = pageElement.querySelectorAll(".content_offers");
+        let heightElements = 0;
+        _.forEach(contentOffers, (item) => {
+            heightElements += (item.clientHeight + 20); 
+        });
+        return heightElements + 10;
+    }
+
 }

@@ -32,6 +32,23 @@ ion-app * {
     box-sizing: border-box;
 }
 
+.submenu_content {
+    margin: 0;
+    transition: all 250ms ease;
+    overflow: hidden;
+    &.hide-menu {
+        height: 0 !important;
+    }
+}
+
+.submenu_content-offers {
+    transition: all 250ms ease;
+    overflow: hidden;
+    &.hide-menu {
+        height: 0 !important;
+    }
+}
+
 .c-datepicker {
     word-wrap: normal;
     font-size: initial;
@@ -227,6 +244,10 @@ ion-app * {
     height: 40px;
     margin-top: 66px;
     margin-bottom: 83px;
+    &.cerrar-sesion-btn {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 //Login
@@ -286,6 +307,9 @@ img.ver {
     color: #F98E2B;
     font-weight: 500 !important;
     margin-bottom: 10px;
+    &.cerrar-sesion {
+        font-size: 25px !important;
+    }
 }
 .text1 {
     color: #0B3B61;

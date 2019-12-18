@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {FormBuilder, FormGroup, Validators, AbstractControl} from '@angular/forms';
+import { GlobalVarsProvider } from '../../providers/global-vars/global-vars';
 //import {PedidoPage} from "../pedido/pedido";
 
 /**
@@ -22,6 +23,7 @@ export class LoginPage {
   nav: any;
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
+    private globalVars: GlobalVarsProvider,
     public formbuilder:FormBuilder) {
       this.formgroup = formbuilder.group({
         numeroCelular:['',[Validators.required,Validators.minLength(10)]],
@@ -35,6 +37,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   onclickPagePedidoNuevo() {
+      this.globalVars.logged = true;
     this.navCtrl.setRoot("PedidoPage",null,{direction:"back",animate:true})
     //this.navCtrl.push(PedidoPage);
   }
