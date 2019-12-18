@@ -33,81 +33,12 @@
         <label class="text1">consulta@jmsdataservices.com</label>
     </div>
     <br>
-    <label class="titulo1" style="width:auto">Dirección #1</label>
+    <label class="titulo1" style="width:auto" *ngIf="valueNombre != 1">Dirección #1</label>
+    <label class="titulo1" style="width:auto" *ngIf="valueNombre == 1">Editar Dirección #1</label>
+    
     <img src="../../assets/imgs/editar.png" alt="editar" style="float: right;">
     <br><br>
-    <form action="" [formGroup]="formgroup" id="direccionForm" name="direccionForm" *ngIf="valueNombre == 1">
-        <!-- <form action="" [formGroup]="formgroup" id="login" name="login"> -->
-          
-        <div class="input_content">
-          <label for="descripcion">Descripción de la dirección</label>
-          <input type="text" id="descripcion" formControlName="descripcion" required value="askdhaskdjhsad">
-          <span class="error1" *ngIf="descripcion.hasError('required') && descripcion.touched">* Rellene el Campo</span>
-          <span class="error1" *ngIf="descripcion.hasError('minlength') && descripcion.touched ">* 10 Caractéres minimo</span> 
-        </div>
-        <div class="input_content">
-          <label for="nombre">Nombre del Contacto</label>
-          <input type="text" id="nombre" formControlName="nombre" required>
-          <span class="error1" *ngIf="nombre.hasError('required') && nombre.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="nombre.hasError('minlength') && nombre.touched ">* 5 Caractéres minimo</span>
-        </div>
-        <div class="input_content">
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" formControlName="telefono" required value="texto">
-          <span class="error1" *ngIf="telefono.hasError('required') && telefono.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="telefono.hasError('minlength') && telefono.touched ">* 10 Caractéres minimo</span>
-        </div>
-        <div class="input_content">
-          <label for="direccionFacturacion">Dirección de Facturación</label>
-          <input type="text" id="direccionFacturacion" formControlName="direccionFacturacion" required>
-          <span class="error1" *ngIf="direccionFacturacion.hasError('required') && direccionFacturacion.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="direccionFacturacion.hasError('minlength') && direccionFacturacion.touched ">* 10 Caractéres minimo</span>
-        </div>
-        <div class="input_content">
-          <label for="numeroExterior"># Exterior</label>
-          <input type="number" id="numeroExterior" formControlName="numeroExterior" required>
-          <span class="error1" *ngIf="numeroExterior.hasError('required') && numeroExterior.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="numeroExterior.hasError('minlength') && numeroExterior.touched ">* 2 Caractéres minimo</span>
-        </div>
-        <div class="input_content">
-          <label for="numeroInterior"># Interior</label>
-          <input type="number" id="numeroInterior" name="numeroInterior" required>
-        </div>
-        <div class="input_content">
-          <label for="colonia">Colonia</label>
-          <input type="text" id="colonia" formControlName="colonia" required>
-          <span class="error1" *ngIf="colonia.hasError('required') && colonia.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="colonia.hasError('minlength') && colonia.touched ">* 5 Caractéres minimo</span>
-        </div>
-        <div class="input_content">
-          <label for="cp">Codigo Postal</label>
-          <input type="number" id="cp" formControlName="cp" required>
-          <span class="error1" *ngIf="cp.hasError('required') && cp.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="cp.hasError('minlength') && cp.touched ">* 5 Caractéres minimo</span>
-        </div>
-        <div class="input_content">
-          <label for="localidad">Localidad</label>
-          <input type="text" id="localidad" formControlName="localidad" required>
-          <span class="error1" *ngIf="localidad.hasError('required') && localidad.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="localidad.hasError('minlength') && localidad.touched ">* 5 Caractéres minimo</span>
-        </div>
-        <div class="input_content">
-          <label for="ciudad">Ciudad</label>
-          <input type="text" id="ciudad" formControlName="ciudad" required>
-          <span class="error1" *ngIf="ciudad.hasError('required') && ciudad.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="ciudad.hasError('minlength') && ciudad.touched ">* 5 Caractéres minimo</span>
-        </div>
-        <div class="input_content">
-          <label for="estado">Estado</label>
-          <input type="text" id="estado" formControlName="estado" required>
-          <span class="error1" *ngIf="estado.hasError('required') && estado.touched ">* Rellene el Campo</span>
-          <span class="error1" *ngIf="estado.hasError('minlength') && estado.touched ">* 5 Caractéres minimo</span>
-        </div>
-        <div class="center">
-            <button ion-button color="orange" type="submit" (click)="onclickMisDatos()" [disabled]="formgroup.invalid">Agregar Dirección</button>
-        </div>
-      </form>
-      <form action="" [formGroup]="formgroup" id="direccionForm" name="direccionForm" *ngIf="valueNombre != 1">
+      <form action="" [formGroup]="formgroup" id="direccionForm" name="direccionForm">
           <!-- <form action="" [formGroup]="formgroup" id="login" name="login"> -->
             
           <div class="input_content">

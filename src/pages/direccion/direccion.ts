@@ -31,7 +31,7 @@ export class DireccionPage {
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     public formbuilder:FormBuilder) {
-      this.valueNombre = this.navParams.get("variable")
+      
       this.formgroup = formbuilder.group({
         descripcion:['',[Validators.required,Validators.minLength(10)]],
         nombre:['',[Validators.required,Validators.minLength(5)]],
@@ -54,6 +54,12 @@ export class DireccionPage {
       this.localidad = this.formgroup.controls["localidad"];
       this.ciudad = this.formgroup.controls["ciudad"];
       this.estado = this.formgroup.controls["estado"];
+      if(this.navParams.get("variable") == 1){
+        this.descripcion.setValue("Casa");
+        this.nombre.setValue("Juan Perez");
+        this.telefono.setValue("+5214731234567");
+      }
+      
   }
 
   ionViewDidLoad() {
