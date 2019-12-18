@@ -27,7 +27,15 @@ export class GlobalVarsProvider {
         this._isIOS = v;
     }    
 
-
+    
+    private _pages : any;
+    public get pages() : any {
+        return this._pages;
+    }
+    public set pages(v : any) {
+        this._pages = v;
+    }
+    
     
     private _logged : boolean = false;
     public get logged() : boolean {

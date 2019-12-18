@@ -31,11 +31,11 @@ export class MyApp {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Inicio', component: HomePage },
+    this.globalVars.pages = [
+      { title: 'Inicio', component: HomePage,"requiredLogged" : false, },
       // { title: 'List', component: ListPage }
-      { title: 'Pedir Producto', component: PEDIDO_NUEVO },
-      { title: 'Mis Datos +', component: MISDATOS_PAGE,
+      { title: 'Pedir Producto', component: PEDIDO_NUEVO,"requiredLogged" : false, },
+      { title: 'Mis Datos', "subtitle" : "Mis Datos +", component: MISDATOS_PAGE, "requiredLogged" : true,
                 "statusClass" : "hide-menu", "subPage" : [
                     {
                         "title" : "Empresa"
@@ -45,9 +45,9 @@ export class MyApp {
                     }
                 ]
         },
-      { title: 'Mis Pedidos', component: PEDIDOS_PAGE },
-      { title: 'Preferencias', component: HomePage },
-      { title: 'Estado de Cuenta', component: HomePage }
+      { title: 'Mis Pedidos', component: PEDIDOS_PAGE, "requiredLogged" : false, },
+      { title: 'Preferencias', component: HomePage, "requiredLogged" : false, },
+      { title: 'Estado de Cuenta', component: HomePage, "requiredLogged" : false, }
     ];
 
   }
@@ -69,20 +69,21 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
   onclickPageLogin() {
+    this.globalVars.logged = false;
     this.nav.setRoot(LoginPage,null,{direction:"back",animate:true})
     //this.nav.push(LoginPage);
   }
 
   public openSubMenu(page): void {
     let statusClass = page.statusClass == "hide-menu" ? "" : "hide-menu";
-        _.map(this.pages, (item: any) => {
+        _.map(this.globalVars.pages, (item: any) => {
             if (item.title == page.title) {
                 item.statusClass = statusClass;
                 if (statusClass == "hide-menu") {
-                    item.title = "Mis datos +"
+                    item.subtitle = item.title + " +"
                 }
                 else {
-                    item.title = "Mis datos -"
+                    item.subtitle = item.title + " -"
                 }
             }
         });

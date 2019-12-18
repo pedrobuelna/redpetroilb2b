@@ -24,13 +24,19 @@
       <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button> -->
-      <ng-template ngFor let-page [ngForOf]="pages"> 
-        <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.subPageOffer" ion-item>
+      <ng-template ngFor let-page [ngForOf]="globalVars.pages"> 
+        <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.requiredLogged" ion-item>
+            {{page?.title}}
+        </button>
+        <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && ( page.requiredLogged && globalVars.logged)" ion-item>
             {{page?.title}}
         </button>
         <ng-container *ngIf="page?.subPage">
-            <button ion-item (click)="openSubMenu(page)">
-                {{page?.title}}
+            <button *ngIf="!page.requiredLogged" ion-item (click)="openSubMenu(page)">
+                {{page?.subtitle}}
+            </button>
+            <button *ngIf="( page.requiredLogged && globalVars.logged)" ion-item (click)="openSubMenu(page)">
+                {{page?.subtitle}}
             </button>
             <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">
                 <button 
