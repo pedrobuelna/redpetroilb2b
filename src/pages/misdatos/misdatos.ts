@@ -71,5 +71,8 @@ export class MisdatosPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MisdatosPage');
   }
-  
+  onclickPedidos() {
+    this.navCtrl.setRoot("PedidosPage",null,{direction:"back",animate:true})
+    //this.navCtrl.push("DireccionesPage");
+  }
 }
