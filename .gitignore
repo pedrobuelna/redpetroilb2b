@@ -67,3 +67,5 @@ core/loader/
 core/www/
 .stencil/
 angular/build/
+.sourcemaps/
+www/
