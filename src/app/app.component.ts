@@ -1,4 +1,4 @@
-import { REGISTRO_PAGE,LOGIN_PAGE,PEDIDO_NUEVO,DIRECCIONES_PAGE,DIRECCION_PAGE,MISDATOS_PAGE,PEDIDOS_PAGE  } from './../pages/pages.constants';
+import {PEDIDO_NUEVO,MISDATOS_PAGE,PEDIDOS_PAGE,  } from './../pages/pages.constants';
  
 
 import { Component, ViewChild } from '@angular/core';
@@ -7,13 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { LoginPage } from '../pages/login/login';
-import { PedidosPage } from '../pages/pedidos/pedidos';
-import { MisdatosPage } from '../pages/misdatos/misdatos';
+// import { ListPage } from '../pages/list/list';
+ import { LoginPage } from '../pages/login/login';
+// import { PedidosPage } from '../pages/pedidos/pedidos';
+// import { MisdatosPage } from '../pages/misdatos/misdatos';
 
-import { DireccionesPage } from '../pages/direcciones/direcciones';
-import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
+// import { DireccionesPage } from '../pages/direcciones/direcciones';
+// import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
 
 @Component({
   templateUrl: 'app.html'

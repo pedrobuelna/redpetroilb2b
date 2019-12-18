@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {DireccionPage} from "../direccion/direccion";
+
 /**
  * Generated class for the DireccionesPage page.
  *

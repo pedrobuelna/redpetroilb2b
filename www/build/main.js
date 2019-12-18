@@ -22,15 +22,15 @@ webpackEmptyAsyncContext.id = 109;
 
 var map = {
 	"../pages/alertas/alertas.module": [
-		272,
+		273,
 		7
 	],
 	"../pages/direccion/direccion.module": [
-		274,
+		272,
 		6
 	],
 	"../pages/direcciones/direcciones.module": [
-		273,
+		274,
 		5
 	],
 	"../pages/gracias/gracias.module": [
@@ -46,11 +46,11 @@ var map = {
 		8
 	],
 	"../pages/misdatos/misdatos.module": [
-		279,
+		278,
 		2
 	],
 	"../pages/pedido/pedido.module": [
-		278,
+		279,
 		1
 	],
 	"../pages/pedidos/pedidos.module": [
@@ -91,10 +91,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+//import { NavController, NavParams, Platform } from 'ionic-angular';
 
 var HomePage = /** @class */ (function () {
-    function HomePage(platform, navCtrl, navParams) {
-        this.platform = platform;
+    //  constructor(private platform: Platform,
+    function HomePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
@@ -102,8 +103,7 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle right>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <!-- <ion-title>Home</ion-title> -->\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding class="home">\n  <!-- <h3>Ionic Menu Starter</h3> -->\n  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n  <div class="content_logo">\n      <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/admin/Documents/GitHub/redpetroilb2b/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], HomePage);
     return HomePage;
 }());
@@ -154,6 +154,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// import { DireccionesPage } from '../pages/direcciones/direcciones';
+// import { PedidoPage } from '../pages/pedido/pedido';
+// import { PedidosPage } from '../pages/pedidos/pedidos';
 
 
 
@@ -172,14 +175,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/direccion/direccion.module#DireccionPageModule', name: 'DireccionPage', segment: 'direccion', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/alertas/alertas.module#AlertasPageModule', name: 'AlertasPage', segment: 'alertas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/direcciones/direcciones.module#DireccionesPageModule', name: 'DireccionesPage', segment: 'direcciones', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/direccion/direccion.module#DireccionPageModule', name: 'DireccionPage', segment: 'direccion', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/gracias/gracias.module#GraciasPageModule', name: 'GraciasPage', segment: 'gracias', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/graficas/graficas.module#GraficasPageModule', name: 'GraficasPage', segment: 'graficas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/pedido/pedido.module#PedidoPageModule', name: 'PedidoPage', segment: 'pedido', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/misdatos/misdatos.module#MisdatosPageModule', name: 'MisdatosPage', segment: 'misdatos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedido/pedido.module#PedidoPageModule', name: 'PedidoPage', segment: 'pedido', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedidos/pedidos.module#PedidosPageModule', name: 'PedidosPage', segment: 'pedidos', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -233,7 +236,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+// import { ListPage } from '../pages/list/list';
 
+// import { PedidosPage } from '../pages/pedidos/pedidos';
+// import { MisdatosPage } from '../pages/misdatos/misdatos';
+// import { DireccionesPage } from '../pages/direcciones/direcciones';
+// import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
 var MyApp = /** @class */ (function () {
     function MyApp(platform, statusBar, splashScreen) {
         this.platform = platform;
@@ -431,7 +439,7 @@ var GlobalVarsProvider = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(13);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -444,6 +452,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+//import {PedidoPage} from "../pedido/pedido";
 /**
  * Generated class for the LoginPage page.
  *

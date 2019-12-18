@@ -24,22 +24,24 @@
     <label class="titulo1" style="width:auto">Mis Datos</label>
     <img src="../../assets/imgs/editar.png" alt="editar" style="float: right;">
     <br><br>
-    <form action="" id="misdatosForm" name="misdatosForm">
-        <!-- <form action="" [formGroup]="formgroup" id="login" name="login"> -->
+    <form action="" [formGroup]="formgroup" id="misdatosForm" name="misdatosForm">
         <div class="input_content">
           <label for="razonsocial">Razón Social</label>
-          <input type="text" id="razonsocial" name="razonsocial" required>
-          <!-- <input type="text" id="descrpcion" formControlName="descrpcion" required> -->
-          <!-- <span class="error1" *ngIf="descrpcion.hasError('required') && descrpcion.touched">* Rellene el Campo</span>
-          <span class="error1" *ngIf="descrpcion.hasError('minlength') && descrpcion.touched ">* 10 Caractéres minimo</span> -->
+          <input type="text" id="razonsocial" formControlName="razonsocial" required>
+          <span class="error1" *ngIf="razonsocial.hasError('required') && razonsocial.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="razonsocial.hasError('minlength') && razonsocial.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="direccionFacturacion">Dirección de Facturación</label>
-          <input type="text" id="direccionFacturacion" name="direccionFacturacion" required>
+          <input type="text" id="direccionFacturacion" formControlName="direccionFacturacion" required>
+          <span class="error1" *ngIf="direccionFacturacion.hasError('required') && direccionFacturacion.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="direccionFacturacion.hasError('minlength') && direccionFacturacion.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="numeroExterior"># Exterior</label>
-          <input type="number" id="numeroExterior" name="numeroExterior" required>
+          <input type="number" id="numeroExterior" formControlName="numeroExterior" required>
+          <span class="error1" *ngIf="numeroExterior.hasError('required') && numeroExterior.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="numeroExterior.hasError('minlength') && numeroExterior.touched ">* 2 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="numeroInterior"># Interior</label>
@@ -47,50 +49,73 @@
         </div>
         <div class="input_content">
           <label for="colonia">Colonia</label>
-          <input type="text" id="colonia" name="colonia" required>
+          <input type="text" id="colonia" formControlName="colonia" required>
+          <span class="error1" *ngIf="colonia.hasError('required') && colonia.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="colonia.hasError('minlength') && colonia.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="cp">Codigo Postal</label>
-          <input type="number" id="cp" name="cp" required>
+          <input type="number" id="cp" formControlName="cp" required>
+          <span class="error1" *ngIf="cp.hasError('required') && cp.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="cp.hasError('minlength') && cp.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="localidad">Localidad</label>
-          <input type="text" id="localidad" name="localidad" required>
+          <input type="text" id="localidad" formControlName="localidad" required>
+          <span class="error1" *ngIf="localidad.hasError('required') && localidad.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="localidad.hasError('minlength') && localidad.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="ciudad">Ciudad</label>
-          <input type="text" id="ciudad" name="ciudad" required>
+          <input type="text" id="ciudad" formControlName="ciudad" required>
+          <span class="error1" *ngIf="ciudad.hasError('required') && ciudad.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="ciudad.hasError('minlength') && ciudad.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="estado">Estado</label>
-          <input type="text" id="estado" name="estado" required>
+          <input type="text" id="estado" formControlName="estado" required>
+          <span class="error1" *ngIf="estado.hasError('required') && estado.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="estado.hasError('minlength') && estado.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="rfc">RFC</label>
-          <input type="text" id="rfc" name="rfc" required>
+          <input type="text" id="rfc" formControlName="rfc" required>
+          <span class="error1" *ngIf="rfc.hasError('required') && rfc.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="rfc.hasError('minlength') && rfc.touched ">* 12 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="mailFacturacion">Mail de Facturación</label>
-          <input type="email" id="mailFacturacion" name="mailFacturacion" required>
+          <input type="email" id="mailFacturacion" formControlName="mailFacturacion" required>
+          <span class="error1" *ngIf="mailFacturacion.hasError('required') && mailFacturacion.touched">Rellene el Campo</span>
+          <span class="error1" *ngIf="mailFacturacion.hasError('pattern') && mailFacturacion.touched">Ejemplo correo@dominio.com</span>
         </div>
         <div class="input_content">
           <label for="nombreUsuario">Nombre del Usuario</label>
-          <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+          <input type="text" id="nombreUsuario" formControlName="nombreUsuario" required>
+          <span class="error1" *ngIf="nombreUsuario.hasError('required') && nombreUsuario.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="nombreUsuario.hasError('minlength') && nombreUsuario.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="input_content">
           <label for="mailUsuario">Mail del Usuario</label>
-          <input type="email" id="mailUsuario" name="mailUsuario" required>
+          <input type="email" id="mailUsuario" formControlName="mailUsuario" required>
+          <span class="error1" *ngIf="mailUsuario.hasError('required') && mailUsuario.touched">Rellene el Campo</span>
+          <span class="error1" *ngIf="mailUsuario.hasError('pattern') && mailUsuario.touched">Ejemplo correo@dominio.com</span>
         </div>
         <div class="input_content">
           <label for="celularUsuario">Celular del Usuario</label>
-          <input type="number" id="celularUsuario" name="celularUsuario" required>
+          <input type="number" id="celularUsuario" formControlName="celularUsuario" required>
+          <span class="error1" *ngIf="celularUsuario.hasError('required') && celularUsuario.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="celularUsuario.hasError('minlength') && celularUsuario.touched ">* 5 Caractéres minimo</span>
+
         </div>
         <div class="input_content">
           <label for="contrasena">Contraseña</label>
-          <input type="password" id="contrasena" name="contrasena" required>
+          <input type="password" id="contrasena" formControlName="contrasena" required>
+          <span class="error1" *ngIf="contrasena.hasError('required') && contrasena.touched">* Rellene el Campo</span>
+          <span class="error1" *ngIf="contrasena.hasError('minlength') && contrasena.touched ">* 5 Caractéres minimo</span>
         </div>
         <div class="center">
-            <button ion-button color="orange" type="submit" (click)="onclickDatos()">Agregar Datos</button>
+            <button ion-button color="orange" type="submit" (click)="onclickDatos()" [disabled]="formgroup.invalid">Agregar Datos</button>
         </div>
       </form>
     

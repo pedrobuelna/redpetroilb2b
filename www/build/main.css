@@ -28265,7 +28265,10 @@ img.ver {
 
 #pedidos .icon-ios, #pedidos .ion-ios-add,
 #direcciones .icon-ios, #direcciones .ion-ios-add,
-#graficas .icon-ios, #graficas .ion-ios-add {
+#graficas .icon-ios, #graficas .ion-ios-add,
+#pedidos .ion-md-add, #pedidos .ion-md-add,
+#direcciones .ion-md-add, #direcciones .ion-md-add,
+#graficas .ion-md-add {
   margin-right: 16px;
   font-size: 65px;
 }
@@ -28598,7 +28601,8 @@ img.ver {
   height: auto;
 }
 
-#graficas .box_pedido_content .icon-ios, #graficas .box_pedido_content .ion-ios-add {
+#graficas .box_pedido_content .icon-ios, #graficas .box_pedido_content .ion-ios-add,
+#graficas .box_pedido_content .ion-md-add {
   font-size: 25px;
   margin-right: 5px;
 }

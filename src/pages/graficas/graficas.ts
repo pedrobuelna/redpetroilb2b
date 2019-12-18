@@ -21,5 +21,8 @@ export class GraficasPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad GraficasPage');
   }
-  
+  onclickDireccion(){
+    this.navCtrl.setRoot("MisdatosPage",null,{direction:"back",animate:true})
+    //this.navCtrl.push("MisdatosPage");
+  }
 }
