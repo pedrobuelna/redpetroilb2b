@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {DireccionesPage} from "../direcciones/direcciones";
 import MaterialDateTimePicker from 'material-datetime-picker';
 import moment from "moment";
+// import {DireccionesPage} from "../direcciones/direcciones";
 /**
  * Generated class for the PedidoPage page.
  *

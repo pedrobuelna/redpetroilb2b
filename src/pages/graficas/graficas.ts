@@ -35,8 +35,11 @@ export class GraficasPage {
     constructor(public navCtrl: NavController, public navParams: NavParams) {
     }
 
-    ionViewDidLoad() {
-        console.log('ionViewDidLoad GraficasPage');
-    }
-  
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad GraficasPage');
+  }
+  onclickDireccion(){
+    this.navCtrl.setRoot("MisdatosPage",null,{direction:"back",animate:true})
+    //this.navCtrl.push("MisdatosPage");
+  }
 }

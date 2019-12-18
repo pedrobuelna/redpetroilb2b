@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {FormBuilder, FormGroup, Validators, AbstractControl} from '@angular/forms';
-import {PedidoPage} from "../pedido/pedido";
+//import {PedidoPage} from "../pedido/pedido";
 
 /**
  * Generated class for the LoginPage page.
