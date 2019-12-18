@@ -495,7 +495,7 @@ img.ver {
 .content_fecha_hora{color:#0B3B61;font-size: 13px;font-weight: 500;margin-bottom: 10px;}
 .content_fecha_hora span:first-child{float: left;}
 .content_fecha_hora span:last-child{float: right;}
-.clearfix:after{content: '.';display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix:after{content: '';display: block;height: 0;clear: both;visibility: hidden;}
 .box_pedido_content{background: #FF6D10;padding: 20px 10px 10px;text-align: center;position: relative;color: #0B3B61;margin-bottom: 2px;height: 198px;overflow: hidden;}
 .tipo_gas_img{width: 121px;margin-bottom: 15px;}
 .menu_pedido{position: absolute;right: 10px;top: 27px;}
