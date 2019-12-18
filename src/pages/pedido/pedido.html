@@ -24,17 +24,17 @@
     <form action="" id="pedidoForm" name="pedidoForm">
           <ion-row class="ion-justify-content-start">
             <label for="fechaSurtido">Fecha y hora de surtido de pedido</label>
-            <ion-col size="2">
-              <div>
-                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="inputDate" (focus)="onFocusDate()" class="input-text-date" type="text" id="fechaSurtido">
-              </div>
-            </ion-col>
-            <ion-col size="2">
-              <div>
-                  <!-- <input type="time" id="horaSurtido"> -->
-                  <input [ngModelOptions]="{standalone: true}" [(ngModel)]="inputDateTime" (focus)="onFocusDateTime()" class="input-text-date" type="text" id="horaSurtido">
-              </div>
-            </ion-col>
+            <div class="col1">
+              <div class="col2">                  
+                      <input [ngModelOptions]="{standalone: true}" [(ngModel)]="inputDate" (focus)="onFocusDate()" class="input-text-date" type="text" id="fechaSurtido">
+                </div>
+                <div class="col2">                  
+                      <!-- <input type="time" id="horaSurtido"> -->
+                      <input [ngModelOptions]="{standalone: true}" [(ngModel)]="inputDateTime" (focus)="onFocusDateTime()" class="input-text-date" type="text" id="horaSurtido">
+                </div>
+            </div>
+              
+            
           </ion-row>
       
       <div class="input_content">

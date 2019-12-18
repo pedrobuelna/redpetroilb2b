@@ -27,9 +27,11 @@ export class DireccionPage {
   ciudad:AbstractControl;
   estado:AbstractControl;
   nav: any;
+  public valueNombre = null;
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     public formbuilder:FormBuilder) {
+      this.valueNombre = this.navParams.get("variable")
       this.formgroup = formbuilder.group({
         descripcion:['',[Validators.required,Validators.minLength(10)]],
         nombre:['',[Validators.required,Validators.minLength(5)]],

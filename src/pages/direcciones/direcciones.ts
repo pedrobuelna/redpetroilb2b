@@ -25,4 +25,8 @@ export class DireccionesPage {
     this.navCtrl.setRoot("DireccionPage",null,{direction:"back",animate:true})
     //this.navCtrl.push("DireccionesPage");
   }
+  onclickEditarDireccion() {
+    this.navCtrl.setRoot("DireccionPage",{"variable":1},{direction:"back",animate:true})
+    //this.navCtrl.push("DireccionesPage");
+  }
 }

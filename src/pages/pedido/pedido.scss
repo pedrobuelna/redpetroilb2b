@@ -1,6 +1,9 @@
 page-pedido {
     .input-text-date {
-        width: 10em !important;
+        // width: 10em !important;
         text-align: center;
     }
+    .col1{width: 100%;}
+    .col2{width: calc(50% - 5px); float: left;}
+    .col2:last-child{margin-left: 10px;}
 }
