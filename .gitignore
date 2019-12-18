@@ -68,3 +68,6 @@ core/www/
 angular/build/
 .sourcemaps/
 www/
+platforms/
+plugins/
+resources/

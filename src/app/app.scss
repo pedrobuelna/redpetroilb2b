@@ -504,7 +504,9 @@ img.ver {
 .box_pedido_content:nth-of-type(odd){
     background: #F98E2B;
 }
-.active{background: white;padding-left: 0;padding-right: 0; height: auto;}
+.box_pedido_content {
+    &.active{background:  white !important;padding-left: 0;padding-right: 0; height: auto;}
+}
 #graficas .box_pedido_content .icon-ios, #graficas .box_pedido_content .ion-ios-add,
 #graficas .box_pedido_content .ion-md-add{
     font-size: 25px;margin-right: 5px;

@@ -57,7 +57,72 @@
     <span>Diciembre 24, 2019</span>
     <span>4:20pm</span>
   </div>
-  <div class="box_pedido_content active">
+  <ng-template ngFor let-pedido let-i="index" [ngForOf]="pedidosGas">
+    <div *ngIf="pedido?.status == 'active'" class="box_pedido_content active">
+        <div class="content_menu_pedido">
+            <img [src]="pedido?.imgGas" alt="diesel" class="tipo_gas_img">
+            <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido" (click)="openBar(i)">
+        </div>
+        <div class="content_txt1">
+            <span class="texto1G">Precios: Litro/litro</span> <br>
+            <span class="texto1G">MXN 21.150 / 80.061</span>
+        </div>
+        <div class="content_txt2">
+            <span class="texto3G">USD 1.081 / 4.092</span> <br>
+            <span class="texto3G">EUR 0.977 / 3.698</span>
+        </div>
+        <div class="content_grafica_barras">
+            <div class="btn-grf">
+                <ion-icon (click)="onClickPrecio(i,'active')" name="add"></ion-icon>
+                <ion-icon (click)="onClickPrecio(i,'')" name="remove"></ion-icon>
+            </div>
+          <div class="pesos">
+              <span>MXN 21.50</span>
+              <span>USD 1.081</span>
+              <span>EUR 3.68</span>
+          </div>
+        </div>
+        <chart-bars-saldos
+            [data]="dataInputBar"></chart-bars-saldos>
+        <div *ngIf="pedido?.statusPrecios == 'active'" class="contenido_precios_litro">
+          <img [src]="pedido?.imgGas" alt="diesel" class="tipo_gasgrafica">
+          <div class="content_tabla_litros">
+            <table>
+              <thead>
+                <th>Precios Litro</th>
+                <th align="center">Galon</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MXN 21.150</td>
+                  <td align="center">80.061</td> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+      </div>
+    <div  *ngIf="pedido?.status != 'active'" class="box_pedido_content">
+        <div class="content_menu_pedido">
+            <img [src]="pedido?.imgGas" alt="magna" class="tipo_gas_img">
+            <img (click)="openBar(i)" src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
+        </div>
+        <div class="content_txt1">
+            <span class="texto1G">Precios: Litro/litro</span> <br>
+            <span class="texto1G">MXN 21.150 / 80.061</span>
+        </div>
+        <div class="content_txt2">
+            <span class="texto3G">USD 1.081 / 4.092</span> <br>
+            <span class="texto3G">EUR 0.977 / 3.698</span>
+        </div>
+        <div class="content_grafica_barras">
+            <ion-icon name="add"></ion-icon>
+            <ion-icon name="remove"></ion-icon>
+        </div>
+    </div>
+  </ng-template>
+  <!-- <div class="box_pedido_content active">
     <div class="content_menu_pedido">
         <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gas_img">
         <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido" (click)="onclickActive()">
@@ -81,7 +146,6 @@
           <span>EUR 3.68</span>
       </div>
     </div>
-    <!-- <img src="../../assets/imgs/graficas_barras.png" alt="graficas_barras"> -->
     <chart-bars-saldos
         [data]="dataInputBar"></chart-bars-saldos>
     <div class="contenido_precios_litro">
@@ -102,8 +166,8 @@
       </div>
       
     </div>
-  </div>
-  <div class="box_pedido_content">
+  </div> -->
+  <!-- <div class="box_pedido_content">
     <div class="content_menu_pedido">
         <img src="../../assets/imgs/magna.png" alt="magna" class="tipo_gas_img">
         <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
@@ -120,8 +184,53 @@
       <ion-icon name="add"></ion-icon>
       <ion-icon name="remove"></ion-icon>
     </div>
-  </div>
-  <div class="box_pedido_content">
+  </div>  -->
+    <!-- <div class="box_pedido_content active">
+        <div class="content_menu_pedido">
+            <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gas_img">
+            <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido" (click)="onclickActive()">
+        </div>
+        <div class="content_txt1">
+            <span class="texto1G">Precios: Litro/litro</span> <br>
+            <span class="texto1G">MXN 21.150 / 80.061</span>
+        </div>
+        <div class="content_txt2">
+            <span class="texto3G">USD 1.081 / 4.092</span> <br>
+            <span class="texto3G">EUR 0.977 / 3.698</span>
+        </div>
+        <div class="content_grafica_barras">
+            <div class="btn-grf">
+                <ion-icon name="add"></ion-icon>
+                <ion-icon name="remove"></ion-icon>
+            </div>
+          <div class="pesos">
+              <span>MXN 21.50</span>
+              <span>USD 1.081</span>
+              <span>EUR 3.68</span>
+          </div>
+        </div>
+        <chart-bars-saldos
+            [data]="dataInputBar"></chart-bars-saldos>
+        <div class="contenido_precios_litro">
+          <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gasgrafica">
+          <div class="content_tabla_litros">
+            <table>
+              <thead>
+                <th>Precios Litro</th>
+                <th align="center">Galon</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MXN 21.150</td>
+                  <td align="center">80.061</td> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+      </div> -->
+  <!-- <div class="box_pedido_content">
     <div class="content_menu_pedido">
         <img src="../../assets/imgs/premium.png" alt="premium" class="tipo_gas_img">
         <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
@@ -188,5 +297,5 @@
         <div class="content_grafica_barras">
             <ion-icon name="add"></ion-icon>
         </div>
-      </div>
+      </div> -->
 </ion-content>

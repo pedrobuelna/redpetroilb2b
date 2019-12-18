@@ -1,5 +1,7 @@
 {
   "name": "redpetroilb2b",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
