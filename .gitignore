@@ -17,7 +17,6 @@ log.txt
 .versions/
 coverage/
 collection/
-dist/
 dist-transpiled/
 node_modules/
 tmp/
