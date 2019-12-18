@@ -36,7 +36,22 @@
       <span class="texto1G">Corte en 30 días</span>
     </div>
   </div>
-  <img src="../../assets/imgs/graficas.png" alt="graficas" style="width: 100%;margin:auto;display: block;margin-top: 15px;">
+  <!-- <img src="../../assets/imgs/graficas.png" alt="graficas" style="width: 100%;margin:auto;display: block;margin-top: 15px;"> -->
+  <ion-grid no-margin no-padding>
+    <ion-row>
+        <ion-col col-6>
+            <chart-doughnut-percent
+                title="Saldo"
+                subtitle="Crédito"></chart-doughnut-percent>
+        </ion-col>
+        <ion-col col-6>
+            <chart-doughnut-percent
+                title="Saldo"
+                subtitle="Saldos vencidos"
+                [dataInputs]="dataInput2"></chart-doughnut-percent>
+        </ion-col>
+    </ion-row>
+</ion-grid>
   <div class="division"></div>
   <div class="content_fecha_hora clearfix">
     <span>Diciembre 24, 2019</span>
@@ -56,10 +71,19 @@
         <span class="texto3G">EUR 0.977 / 3.698</span>
     </div>
     <div class="content_grafica_barras">
-      <ion-icon name="add"></ion-icon>
-      <ion-icon name="remove"></ion-icon>
+        <div class="btn-grf">
+            <ion-icon name="add"></ion-icon>
+            <ion-icon name="remove"></ion-icon>
+        </div>
+      <div class="pesos">
+          <span>MXN 21.50</span>
+          <span>USD 1.081</span>
+          <span>EUR 3.68</span>
+      </div>
     </div>
-    <img src="../../assets/imgs/graficas_barras.png" alt="graficas_barras">
+    <!-- <img src="../../assets/imgs/graficas_barras.png" alt="graficas_barras"> -->
+    <chart-bars-saldos
+        [data]="dataInputBar"></chart-bars-saldos>
     <div class="contenido_precios_litro">
       <img src="../../assets/imgs/diesel.png" alt="diesel" class="tipo_gasgrafica">
       <div class="content_tabla_litros">

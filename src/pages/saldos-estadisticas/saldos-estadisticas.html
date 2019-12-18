@@ -9,7 +9,15 @@
         <ion-title>saldos-estadisticas</ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content id="direcciones" padding>
+    <div class="center">
+        <label class="titulo1">JMS Data Services</label>
+        <label class="text1">+52 1 473 123 4567</label>
+        <label class="text1">consulta@jmsdataservices.com</label>
+    </div>
+    <div class="center">
+        <button ion-button color="orange" type="submit"><ion-icon name="add"></ion-icon>Agregar Dirección de Entrega</button>
+    </div>
     <ion-grid no-margin no-padding>
         <ion-row>
             <ion-col col-6>
@@ -26,4 +34,5 @@
         </ion-row>
     </ion-grid>
     <canvas height="220" id="canvas"></canvas>
+    <button (click)="onClickDatePicker()" ion-button>datepicker</button>
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import MaterialDateTimePicker from 'material-datetime-picker';
 
 /**
  * Generated class for the SaldosEstadisticasPage page.
@@ -95,6 +96,17 @@ export class SaldosEstadisticasPage {
             }
         });
 	
+    }
+
+    public onClickDatePicker(): void {
+        const picker = new MaterialDateTimePicker({
+            "datePickerOnly" : true
+            // "timePickerOnly" : true
+        })
+        .on('submit', (val) => console.log(`data: ${val}`))
+        .on('open', () => console.log('opened'))
+        .on('close', () => console.log('closed'));
+        picker.open();
     }
 
 }

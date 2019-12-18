@@ -19,6 +19,108 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
+* {
+    -webkit-box-sizing: unset;
+    box-sizing: unset;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+ion-app * {
+    box-sizing: border-box;
+}
+
+.c-datepicker {
+    word-wrap: normal;
+    font-size: initial;
+    .active {
+        background: transparent;
+    }
+    .c-datepicker__toggle {
+        top: 175px;
+    }
+    .c-datepicker__header-day {
+        background-color: #fd791b;
+    }
+    .c-datepicker__header-date {
+        background-color: #f98f2b;
+    }
+    .c-datepicker__day-head {
+        color: #f98f2b;
+        font-weight: normal;
+        font-size: 1.5rem
+    }
+    .c-datepicker__day-body {
+        color: #0b3a61;
+        font-size: 1.5rem;
+        font-weight: bold;
+        &.rd-day-prev-month, &.rd-day-next-month {
+            color: transparent;
+        }
+        &.c-datepicker__day--selected {
+            color: #f98f2b;
+        }
+        &.c-datepicker__day--selected::after, &.c-datepicker__day--selected::before {
+            background: none;
+        }
+    }
+    .modal-btns {
+        .c-btn {
+            color: #898989;
+        }
+    }
+    .c-datepicker__header-date__time {
+        font-size: 6rem;
+        font-weight: bold;
+    }
+    &.c-datepicker--time-only {
+        .c-datepicker__header-date {
+            padding: 2px 0;
+        }
+        .c-datepicker__clock {
+            padding: 90px 0 20px 0;
+        }
+        .c-datepicker__clock::before {
+            top: 34px;
+            background: #fef4eb;
+        }
+        .c-datepicker__clock__am-pm-toggle {
+            top: 274px;
+        }
+        .c-datepicker__clock__num {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0b3a61;
+        }
+        .c-datepicker__day-body--active:not(.hide-hand):before, 
+        .c-datepicker__clock__num--active:not(.hide-hand):before, 
+        .c-datepicker__clock-hands,
+        .c-datepicker__clock .c-datepicker__clock__num:nth-of-type(12).c-datepicker__clock__num--active:not(.hide-hand) ~ .c-datepicker__clock-hands .c-datepicker__hour-hand,
+        .u-hover-ball-effect:hover:before, .c-datepicker__day-body:hover:before, .c-datepicker__clock__num:hover:before, .c-datepicker__clock__am-pm-toggle label:hover:before,
+        .c-datepicker__hour-hand {
+            background: #f98f2b !important;
+        }
+        .c-datepicker__clock__am-pm-toggle label.c-datepicker__toggle--checked::after {
+            background: #0b3a61;
+            width: 42px;
+            height: 42px;
+        }
+        .c-datepicker__clock__am-pm-toggle label {
+            font-size: 1.8rem;
+            &.c-datepicker__toggle--checked {
+                color: white;
+            }
+        }
+        .modal-btns {
+            .c-btn {
+                font-weight: bold;
+                color: #0b3a61;
+            }
+        }
+    }
+}
   
 .home .content_logo {
     margin: auto;
@@ -405,7 +507,20 @@ img.ver {
 .content_grafica_barras {
     position: relative;
     left: 0;
-    width: 44px;margin-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 5px;
+    padding-right: 5px;
+    .pesos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 1rem;
+        font-weight: bold;
+    }
 }
 .contenido_precios_litro{text-align: left;align-items: center;display: flex;justify-content: left;}
 .tipo_gasgrafica{width: 121px;margin-right: 10px;}

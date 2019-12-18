@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { ChartDoughnutPercentComponent } from './chart-doughnut-percent/chart-doughnut-percent';
+import { ChartBarsSaldosComponent } from './chart-bars-saldos/chart-bars-saldos';
 @NgModule({
 	declarations: [
-    ChartDoughnutPercentComponent],
+    ChartDoughnutPercentComponent,
+    ChartBarsSaldosComponent],
 	imports: [],
 	exports: [
-    ChartDoughnutPercentComponent]
+    ChartDoughnutPercentComponent,
+    ChartBarsSaldosComponent]
 })
 export class ComponentsModule {}

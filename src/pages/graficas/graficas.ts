@@ -14,12 +14,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'graficas.html',
 })
 export class GraficasPage {
- 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GraficasPage');
-  }
+    public dataInput2: number[] = [56,44];
+
+    public dataInputBar: number[] = [
+        60,
+        80,
+        70,
+        85,
+        64,
+        55,
+        20,
+        90,
+        85,
+        88,
+        76,
+        95,
+    ];
+ 
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    }
+
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad GraficasPage');
+    }
   
 }

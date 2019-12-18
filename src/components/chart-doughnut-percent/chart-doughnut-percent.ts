@@ -48,6 +48,9 @@ export class ChartDoughnutPercentComponent {
                 }]
             },
             options: {
+                tooltips: {
+                    enabled: false
+                },
                 cutoutPercentage : 48,
                 legend: {
                     labels: {
