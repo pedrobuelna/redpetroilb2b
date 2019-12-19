@@ -38,7 +38,7 @@ export class LoginPage {
   }
   onclickPagePedidoNuevo() {
       this.globalVars.logged = true;
-    this.navCtrl.setRoot("PedidoPage",null,{direction:"back",animate:true})
+    this.navCtrl.setRoot("GraficasPage",null,{direction:"back",animate:true})
     //this.navCtrl.push(PedidoPage);
   }
   onclickVerPassword(){

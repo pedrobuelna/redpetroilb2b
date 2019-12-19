@@ -33,9 +33,12 @@
         <span class="error1" *ngIf="password.hasError('required') && password.touched ">* Rellene el Campo</span>
         <span class="error1" *ngIf="password.hasError('minlength') && password.touched ">* 5 Caractéres minimo</span>
       </div>
+      <br>
+      <a href="#" (click)="onclickPageOlvideContrasena()">Olvidé Contraseña</a>
       <div class="center">
           <button ion-button color="orange" type="submit" [disabled]="formgroup.invalid" (click)="onclickPagePedidoNuevo()">Iniciar Sesión</button>
       </div>
+      
     </form>
   </ion-content>
   

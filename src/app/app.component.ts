@@ -1,4 +1,4 @@
-import {PEDIDO_NUEVO,MISDATOS_PAGE,PEDIDOS_PAGE,GRAFICAS_PAGE } from './../pages/pages.constants';
+import {PEDIDO_NUEVO,MISDATOS_PAGE,PEDIDOS_PAGE,GRAFICAS_PAGE,ALERTAS_PAGE,DIRECCION_PAGE,DIRECCIONES_PAGE } from './../pages/pages.constants';
  
 
 import { Component, ViewChild } from '@angular/core';
@@ -34,20 +34,20 @@ export class MyApp {
     this.globalVars.pages = [
       { title: 'Inicio', component: GRAFICAS_PAGE,"requiredLogged" : false, },
       // { title: 'List', component: ListPage }
-      { title: 'Pedir Producto', component: PEDIDO_NUEVO,"requiredLogged" : false, },
+      { title: 'Elaboración de pedido', component: PEDIDO_NUEVO,"requiredLogged" : false, },
       { title: 'Mis Datos', "subtitle" : "Mis Datos +", component: MISDATOS_PAGE, "requiredLogged" : true,
                 "statusClass" : "hide-menu", "subPage" : [
                     {
-                        "title" : "Empresa"
+                        "title" : "Empresa",component: MISDATOS_PAGE, "requiredLogged" : false,
                     },
                     {
-                        "title" : "Dirección de entrega"
+                        "title" : "Dirección de entrega",component: DIRECCIONES_PAGE, "requiredLogged" : false,
                     }
                 ]
         },
-      { title: 'Mis Pedidos', component: PEDIDOS_PAGE, "requiredLogged" : false, },
-      { title: 'Preferencias', component: HomePage, "requiredLogged" : false, },
-      { title: 'Estado de Cuenta', component: HomePage, "requiredLogged" : false, }
+      { title: 'Estatus de Pedidos', component: ALERTAS_PAGE, "requiredLogged" : false, },
+      { title: 'Preferencias', component: GRAFICAS_PAGE, "requiredLogged" : false, },
+      { title: 'Estado de Cuenta', component: GRAFICAS_PAGE, "requiredLogged" : false, }
     ];
 
   }
