@@ -1,4 +1,4 @@
-import {PEDIDO_NUEVO,MISDATOS_PAGE,PEDIDOS_PAGE } from './../pages/pages.constants';
+import {PEDIDO_NUEVO,MISDATOS_PAGE,PEDIDOS_PAGE,GRAFICAS_PAGE } from './../pages/pages.constants';
  
 
 import { Component, ViewChild } from '@angular/core';
@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-// import { ListPage } from '../pages/list/list';
+ import { GraficasPage } from '../pages/graficas/graficas';
  import { LoginPage } from '../pages/login/login';
 import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
 // import { PedidosPage } from '../pages/pedidos/pedidos';
@@ -32,7 +32,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.globalVars.pages = [
-      { title: 'Inicio', component: HomePage,"requiredLogged" : false, },
+      { title: 'Inicio', component: GRAFICAS_PAGE,"requiredLogged" : false, },
       // { title: 'List', component: ListPage }
       { title: 'Pedir Producto', component: PEDIDO_NUEVO,"requiredLogged" : false, },
       { title: 'Mis Datos', "subtitle" : "Mis Datos +", component: MISDATOS_PAGE, "requiredLogged" : true,
