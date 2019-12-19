@@ -66,6 +66,9 @@ export class GraficasPage {
       this.navCtrl.setRoot("PedidoPage",null,{direction:"back",animate:true})
       //this.navCtrl.push("DireccionesPage");
     }
+    onclickAlertas(){
+        this.navCtrl.setRoot("AlertasPage",null,{direction:"back",animate:true})
+    }
     public onClickPrecio(index,status): void {
         _.map(this.pedidosGas,(item,indexItem) => {
             if (indexItem == index) {

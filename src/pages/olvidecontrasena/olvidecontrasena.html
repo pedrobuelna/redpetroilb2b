@@ -19,20 +19,20 @@
     <div class="content_logo">
         <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
     </div>
-    Escribe tu correo para enviar tu contraseña
-    <br> <br>
-    <form action=""  id="olvideContrasena" name="olvideContrasenaForm">
-        <!-- <form action="" [formGroup]="formgroup" id="olvideContrasena" name="olvideContrasena"> -->
+    <span style="font-size: 20px;color: #0f3a71;font-weight: 500;">
+        Escribe tu correo para enviar tu contraseña
+    </span>
+    <br> <br> <br>
+    <form action="" [formGroup]="formgroup" id="olvideContrasena" name="olvideContrasenaForm">
         <div class="input_content">
-            <label for="mailFacturacion">Contraseña</label>
-            <input type="email" id="mailOlvidado" name="mailOlvidado" required>
-            <!-- <input type="email" id="mailFacturacion" formControlName="mailFacturacion" required>
-            <span class="error1" *ngIf="mailFacturacion.hasError('required') && mailFacturacion.touched">Rellene el Campo</span>
-            <span class="error1" *ngIf="mailFacturacion.hasError('pattern') && mailFacturacion.touched">Ejemplo correo@dominio.com</span> -->
+            <label for="mailOlvidado">Correo</label>
+            <input type="email" id="mailOlvidado" formControlName="mailOlvidado" required>
+            <span class="error1" *ngIf="mailOlvidado.hasError('required') && mailOlvidado.touched">Rellene el Campo</span>
+            <span class="error1" *ngIf="mailOlvidado.hasError('pattern') && mailOlvidado.touched">Ejemplo correo@dominio.com</span> 
           </div>
       <br>
       <div class="center">
-          <button ion-button color="orange" type="submit" (click)="onclickPagePedidoNuevo()">Enviar</button>
+          <button ion-button color="orange" type="submit" (click)="onclickPagePedidoNuevo()" [disabled]="formgroup.invalid">Enviar</button>
       </div>
       
     </form>

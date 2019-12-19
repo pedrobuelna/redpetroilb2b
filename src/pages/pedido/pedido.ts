@@ -27,8 +27,8 @@ export class PedidoPage {
     ionViewDidLoad() {
         console.log('ionViewDidLoad PedidoPage');
     }
-    onclickDirecciones() {
-        this.navCtrl.setRoot("DireccionesPage",null,{direction:"back",animate:true})
+    onclickPedidos() {
+        this.navCtrl.setRoot("PedidosPage",null,{direction:"back",animate:true})
         //this.navCtrl.push("DireccionesPage");
     }
 
