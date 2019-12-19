@@ -1,0 +1,40 @@
+<!--
+  Generated template for the OlvidecontrasenaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle right>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <!-- <ion-title>Home</ion-title> -->
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding id="login">
+    <!-- <h3>Ionic Menu Starter</h3> -->
+    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
+    <div class="content_logo">
+        <img src="../../assets/imgs/logo_petroil.png" alt="logo" class="logo">
+    </div>
+    Escribe tu correo para enviar tu contraseña
+    <br> <br>
+    <form action=""  id="olvideContrasena" name="olvideContrasenaForm">
+        <!-- <form action="" [formGroup]="formgroup" id="olvideContrasena" name="olvideContrasena"> -->
+        <div class="input_content">
+            <label for="mailFacturacion">Contraseña</label>
+            <input type="email" id="mailOlvidado" name="mailOlvidado" required>
+            <!-- <input type="email" id="mailFacturacion" formControlName="mailFacturacion" required>
+            <span class="error1" *ngIf="mailFacturacion.hasError('required') && mailFacturacion.touched">Rellene el Campo</span>
+            <span class="error1" *ngIf="mailFacturacion.hasError('pattern') && mailFacturacion.touched">Ejemplo correo@dominio.com</span> -->
+          </div>
+      <br>
+      <div class="center">
+          <button ion-button color="orange" type="submit" (click)="onclickPagePedidoNuevo()">Enviar</button>
+      </div>
+      
+    </form>
+  </ion-content>
+  

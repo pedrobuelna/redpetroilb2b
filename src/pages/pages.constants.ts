@@ -8,3 +8,4 @@ export const MISDATOS_PAGE = 'MisdatosPage';
 export const PEDIDOS_PAGE = 'PedidosPage';
 export const GRAFICAS_PAGE = 'GraficasPage';
 export const ALERTAS_PAGE = 'AlertasPage';
+export const OLVIDECONTRASENA_PAGE = 'OlvideContrasenaPage'

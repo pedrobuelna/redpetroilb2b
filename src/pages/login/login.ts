@@ -41,6 +41,9 @@ export class LoginPage {
     this.navCtrl.setRoot("GraficasPage",null,{direction:"back",animate:true})
     //this.navCtrl.push(PedidoPage);
   }
+  onclickPageOlvideContrasena(){
+    this.navCtrl.setRoot("OlvidecontrasenaPage",null,{direction:"back",animate:true})
+  }
   onclickVerPassword(){
     var b = document.querySelector("#password"); 
     
