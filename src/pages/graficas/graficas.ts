@@ -35,7 +35,7 @@ export class GraficasPage {
 
     public pedidosGas = [
         {
-            "status" : "active",
+            "status" : "",
             "statusPrecios" : "",
             "imgGas" : "assets/imgs/diesel.png"
         },
@@ -81,11 +81,11 @@ export class GraficasPage {
         // console.log("index",index);
         _.map(this.pedidosGas,(item,indexItem) => {
             if (indexItem == index) {
-                if (item.status == "active") {
-                    item.status = "";
+                if (item.status == "") {
+                    item.status = "active";
                 }
                 else {
-                    item.status = "active"
+                    item.status = ""
                 }
             }
         });
