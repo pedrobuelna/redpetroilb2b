@@ -1,4 +1,4 @@
-import {PEDIDO_NUEVO,MISDATOS_PAGE,GRAFICAS_PAGE,PEDIDOS_PAGE,DIRECCIONES_PAGE } from './../pages/pages.constants';
+import {PEDIDO_NUEVO,MISDATOS_PAGE,GRAFICAS_PAGE,PEDIDOS_PAGE,DIRECCIONES_PAGE,PREFERENCIAS_PAGE } from './../pages/pages.constants';
  
 
 import { Component, ViewChild } from '@angular/core';
@@ -46,7 +46,7 @@ export class MyApp {
                 ]
         },
       { title: 'Estatus de Pedidos', component: PEDIDOS_PAGE, "requiredLogged" : false, },
-      { title: 'Preferencias', component: GRAFICAS_PAGE, "requiredLogged" : false, },
+      { title: 'Preferencias', component: PREFERENCIAS_PAGE, "requiredLogged" : false, },
       { title: 'Estado de Cuenta', component: GRAFICAS_PAGE, "requiredLogged" : false, }
     ];
 

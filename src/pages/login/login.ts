@@ -45,7 +45,7 @@ export class LoginPage {
     this.navCtrl.setRoot("OlvidecontrasenaPage",null,{direction:"back",animate:true})
   }
   onclickVerPassword(){
-    var b = document.querySelector("#password"); 
+    var b = document.querySelector("#password");
     
     if(b.getAttribute("type")=="text"){
       b.setAttribute("type", "password");
