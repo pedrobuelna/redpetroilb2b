@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {FormBuilder, FormGroup, Validators, AbstractControl} from '@angular/forms';
 import MaterialDateTimePicker from 'material-datetime-picker';
 import moment from "moment";
 // import {DireccionesPage} from "../direcciones/direcciones";
@@ -20,8 +21,19 @@ export class PedidoPage {
     public inputDate: string = "";
 
     public inputDateTime: string = "";
-
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    formgroup:FormGroup;
+    fecha:AbstractControl;
+    hora:AbstractControl;
+    nav: any;
+    constructor(public navCtrl: NavController, 
+        public navParams: NavParams,
+        public formbuilder:FormBuilder) {
+        this.formgroup = formbuilder.group({
+            fecha:['',[Validators.required,Validators.minLength(10)]],
+            hora:['',[Validators.required,Validators.minLength(5)]]
+        });
+        this.fecha = this.formgroup.controls["fecha"];
+        this.hora = this.formgroup.controls["hora"];
     }
 
     ionViewDidLoad() {

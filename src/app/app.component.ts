@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
- import { GraficasPage } from '../pages/graficas/graficas';
+//  import { GraficasPage } from '../pages/graficas/graficas';
  import { LoginPage } from '../pages/login/login';
 import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
 // import { PedidosPage } from '../pages/pedidos/pedidos';
