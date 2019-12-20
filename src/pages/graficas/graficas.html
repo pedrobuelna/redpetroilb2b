@@ -38,13 +38,13 @@
   </div>
   <!-- <img src="../../assets/imgs/graficas.png" alt="graficas" style="width: 100%;margin:auto;display: block;margin-top: 15px;"> -->
   <ion-grid no-margin no-padding>
-    <ion-row>
-        <ion-col col-6>
+    <ion-row justify-content-center>
+        <ion-col *ngIf="globalVars?.preferencias?.graficaUno?.status" col-6>
             <chart-doughnut-percent
                 title="Saldo"
                 subtitle="Crédito"></chart-doughnut-percent>
         </ion-col>
-        <ion-col col-6>
+        <ion-col *ngIf="globalVars?.preferencias?.graficaDos?.status" col-6>
             <chart-doughnut-percent
                 title="Saldo"
                 subtitle="Saldos vencidos"
@@ -59,7 +59,7 @@
   </div>
   <p>Texto recibido: {{objetoRecibido.valor}}</p>
   <ng-template ngFor let-pedido let-i="index" [ngForOf]="pedidosGas">
-    <div *ngIf="pedido?.status == 'active'" class="box_pedido_content active ">
+    <div *ngIf="pedido?.status == 'active' && pedido?.mostrarGrafica" class="box_pedido_content active ">
         <div class="content_menu_pedido">
             <img [src]="pedido?.imgGas" alt="diesel" class="tipo_gas_img">
             <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido" (click)="openBar(i)">
@@ -104,7 +104,7 @@
           
         </div>
       </div>
-    <div  *ngIf="pedido?.status != 'active'" class="box_pedido_content">
+    <div  *ngIf="pedido?.status != 'active' && pedido?.mostrarGrafica" class="box_pedido_content">
         <div class="content_menu_pedido">
             <img [src]="pedido?.imgGas" alt="magna" class="tipo_gas_img">
             <img (click)="openBar(i)" src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido">
