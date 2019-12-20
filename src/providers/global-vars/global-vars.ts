@@ -20,10 +20,10 @@ export class GlobalVarsProvider {
             "status" : true
         },
         "graficaPremium" : {
-            "status" : false
+            "status" : true
         },
         "graficaUno" : {
-            "status" : false
+            "status" : true
         },
         "graficaDos" : {
             "status" : true

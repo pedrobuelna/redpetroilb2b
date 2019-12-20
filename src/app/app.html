@@ -24,44 +24,76 @@
       <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button> -->
-      <ng-template ngFor let-page [ngForOf]="globalVars.pages"> 
-        <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.requiredLogged" ion-item>
-            {{page?.title}}
-        </button>
-        <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && ( page.requiredLogged && globalVars.logged)" ion-item>
-            {{page?.title}}
-        </button>
-        <ng-container *ngIf="page?.subPage">
-            <button *ngIf="!page.requiredLogged" ion-item (click)="openSubMenu(page)">
-                {{page?.subtitle}}
-            </button>
-            <button *ngIf="( page.requiredLogged && globalVars.logged)" ion-item (click)="openSubMenu(page)">
-                {{page?.subtitle}}
-            </button>
-            <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">
-                <button 
-                    menuClose
-                    ion-item 
-                    (click)="openPage(subPage)" 
-                    *ngFor="let subPage of page.subPage" 
-                    [ngClass]="page?.statusClassList"
-                    class="txtSubmenu">{{subPage?.title}}</button>
-            </ion-list>
-        </ng-container>
-        <!-- <ng-container *ngIf="page.subPageOffer">
-            <button (click)="openSubMenu(page)" ion-item class="content_offers1">
-                <span class="title_offers">{{page?.title}}</span>
-            </button>
-            <ion-list [style.height.px]="calculateHeightOffer(page)" [ngClass]="'submenu_content-' + page?.title + '-s ' + page?.statusClass" class="submenu_content submenu_content-offers">
-                <div *ngFor="let offer of page.subPageOffer" class="content_offers">
-                    <span class="txt2">{{offer?.title}}</span><br>
-                    <span class="txt4">
-                        {{offer?.description}}
-                    </span>
-                </div>
-            </ion-list>
-        </ng-container> -->
-    </ng-template>
+        <div *ngIf="globalVars.logged" class="logueadoClass">
+            <ng-template ngFor let-page [ngForOf]="globalVars.pages"> 
+                <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.requiredLogged" ion-item>
+                    <!-- <div>icono</div> -->
+                    {{page?.title}}
+                </button>
+                <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && ( page.requiredLogged && globalVars.logged)" ion-item>
+                    {{page?.title}}
+                </button>
+                <ng-container *ngIf="page?.subPage">
+                    <button *ngIf="!page.requiredLogged" ion-item (click)="openSubMenu(page)">
+                        {{page?.subtitle}}
+                    </button>
+                    <button *ngIf="( page.requiredLogged && globalVars.logged)" ion-item (click)="openSubMenu(page)">
+                            <!-- <div>Icono</div> -->
+                        {{page?.subtitle}}
+                    </button>
+                    <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">
+                        <button 
+                            menuClose
+                            ion-item 
+                            (click)="openPage(subPage)" 
+                            *ngFor="let subPage of page.subPage" 
+                            [ngClass]="page?.statusClassList"
+                            class="txtSubmenu">{{subPage?.title}}</button>
+                    </ion-list>
+                </ng-container>
+            </ng-template>
+        </div>
+        <div *ngIf="!globalVars.logged" >
+            <ng-template ngFor let-page [ngForOf]="globalVars.pages"> 
+                <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.requiredLogged" ion-item>
+                    {{page?.title}}
+                </button>
+                <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && ( page.requiredLogged && globalVars.logged)" ion-item>
+                    {{page?.title}}
+                </button>
+                <ng-container *ngIf="page?.subPage">
+                    <button *ngIf="!page.requiredLogged" ion-item (click)="openSubMenu(page)">
+                        {{page?.subtitle}}
+                    </button>
+                    <button *ngIf="( page.requiredLogged && globalVars.logged)" ion-item (click)="openSubMenu(page)">
+                        {{page?.subtitle}}
+                    </button>
+                    <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">
+                        <button 
+                            menuClose
+                            ion-item 
+                            (click)="openPage(subPage)" 
+                            *ngFor="let subPage of page.subPage" 
+                            [ngClass]="page?.statusClassList"
+                            class="txtSubmenu">{{subPage?.title}}</button>
+                    </ion-list>
+                </ng-container>
+                <!-- <ng-container *ngIf="page.subPageOffer">
+                    <button (click)="openSubMenu(page)" ion-item class="content_offers1">
+                        <span class="title_offers">{{page?.title}}</span>
+                    </button>
+                    <ion-list [style.height.px]="calculateHeightOffer(page)" [ngClass]="'submenu_content-' + page?.title + '-s ' + page?.statusClass" class="submenu_content submenu_content-offers">
+                        <div *ngFor="let offer of page.subPageOffer" class="content_offers">
+                            <span class="txt2">{{offer?.title}}</span><br>
+                            <span class="txt4">
+                                {{offer?.description}}
+                            </span>
+                        </div>
+                    </ion-list>
+                </ng-container> -->
+            </ng-template>
+        </div>
+      
     </ion-list>
   </ion-content>
 </ion-menu>

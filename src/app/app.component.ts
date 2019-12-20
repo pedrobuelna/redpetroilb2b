@@ -90,6 +90,7 @@ export class MyApp {
     }
 
     public calculateHeight(items): number {
+        console.log("items",items);
         let buttonSize = 0;
         if (this.globalVars.isAndroid) {
             buttonSize = 70;
