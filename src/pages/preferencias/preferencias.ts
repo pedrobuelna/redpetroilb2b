@@ -14,12 +14,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'preferencias.html',
 })
 export class PreferenciasPage {
-
+  segundaPage = "GraficasPage";
+  datos = [
+    {valor: 1},
+    {valor: 2},
+    {valor: 3},
+  ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PreferenciasPage');
   }
-
+  abrirSegundaPag(datoSeleccionado) {
+    this.navCtrl.setRoot("GraficasPage", datoSeleccionado);
+  }
 }

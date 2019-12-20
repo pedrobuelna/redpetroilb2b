@@ -45,11 +45,11 @@ export class GlobalVarsProvider {
         this._logged = v;
     }
     
-    private _activo : boolean = false;
-    public get activo() : boolean {
+    private _activo : any;
+    public get activo() : any {
         return this._logged;
     }
-    public set activo(v : boolean) {
+    public set activo(v : any) {
         this._activo = v;
     }
 

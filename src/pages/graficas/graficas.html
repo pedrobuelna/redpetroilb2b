@@ -57,8 +57,9 @@
     <span>Diciembre 24, 2019</span>
     <span>4:20pm</span>
   </div>
+  <p>Texto recibido: {{objetoRecibido.valor}}</p>
   <ng-template ngFor let-pedido let-i="index" [ngForOf]="pedidosGas">
-    <div *ngIf="pedido?.status == 'active'" class="box_pedido_content active">
+    <div *ngIf="pedido?.status == 'active'" class="box_pedido_content active ">
         <div class="content_menu_pedido">
             <img [src]="pedido?.imgGas" alt="diesel" class="tipo_gas_img">
             <img src="../../assets/imgs/menu_pedido.png" alt="menu_pedido" class="menu_pedido" (click)="openBar(i)">

@@ -50,9 +50,10 @@ export class GraficasPage {
             "imgGas" : "assets/imgs/premium.png"
         }
     ];
- 
+    objetoRecibido: any;
     constructor(public navCtrl: NavController, public navParams: NavParams) {
         let objCasa = this.navParams.get("obj");
+        this.objetoRecibido = navParams.data;
     }
 
     ionViewDidLoad() {
