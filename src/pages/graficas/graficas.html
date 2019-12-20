@@ -57,7 +57,7 @@
     <span>Diciembre 24, 2019</span>
     <span>4:20pm</span>
   </div>
-  <p>Texto recibido: {{objetoRecibido.valor}}</p>
+  <!-- <p>Texto recibido: {{objetoRecibido.valor}}</p> -->
   <ng-template ngFor let-pedido let-i="index" [ngForOf]="pedidosGas">
     <div *ngIf="pedido?.status == 'active' && pedido?.mostrarGrafica" class="box_pedido_content active ">
         <div class="content_menu_pedido">
