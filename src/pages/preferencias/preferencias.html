@@ -24,17 +24,32 @@
   <label class="titulo1" style="width:auto">Preferencias</label>
   <br><br>
   <ion-list>
-    <ion-item *ngFor="let dato of datos" [navPush]="GraficasPage" [navParams]="dato" >
+    <!-- <ion-item *ngFor="let dato of datos" [navPush]="GraficasPage" [navParams]="dato" >
         <ion-label><span class="texto1G">Precios: Litro/litro</span> <br>
           <span class="texto1G">MXN 21.150 / 80.061</span></ion-label>
         <ion-toggle color="secondary" checked></ion-toggle>
-    </ion-item>
+    </ion-item> -->
   </ion-list>
   <ion-list>
     <ion-item>
-      <ion-label><span class="texto1G">Precios: Litro/litro</span> <br>
-        <span class="texto1G">MXN 21.150 / 80.061</span></ion-label>
+      <ion-label><span class="texto1G">Diesel</span></ion-label>
+      <ion-toggle color="secondary" checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label><span class="texto1G">Magna</span></ion-label>
+      <ion-toggle color="secondary" checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label><span class="texto1G">Premium</span></ion-label>
+      <ion-toggle color="secondary" checked></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label><span class="texto1G">Grafica1</span></ion-label>
       <ion-toggle color="secondary"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label><span class="texto1G">Grafica2</span></ion-label>
+      <ion-toggle color="secondary" ></ion-toggle>
     </ion-item>
   </ion-list>
 </ion-content>
