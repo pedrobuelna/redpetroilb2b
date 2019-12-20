@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import _ from "lodash";
+import { GlobalVarsProvider } from '../../providers/global-vars/global-vars';
 
 /**
  * Generated class for the GraficasPage page.
@@ -37,23 +38,31 @@ export class GraficasPage {
         {
             "status" : "",
             "statusPrecios" : "",
-            "imgGas" : "assets/imgs/diesel.png"
+            "imgGas" : "assets/imgs/diesel.png",
+            "mostrarGrafica" : this.globalVars.preferencias.graficaDiesel.status
         },
         {
             "status" : "",
             "statusPrecios" : "",
-            "imgGas" : "assets/imgs/magna.png"
+            "imgGas" : "assets/imgs/magna.png",
+            "mostrarGrafica" : this.globalVars.preferencias.graficaMagna.status
         },
         {
             "status" : "",
             "statusPrecios" : "",
-            "imgGas" : "assets/imgs/premium.png"
+            "imgGas" : "assets/imgs/premium.png",
+            "mostrarGrafica" : this.globalVars.preferencias.graficaPremium.status
         }
     ];
+    
     objetoRecibido: any;
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
-        let objCasa = this.navParams.get("obj");
-        this.objetoRecibido = navParams.data;
+    
+    constructor(
+        public navCtrl: NavController, 
+        public navParams: NavParams,
+        public globalVars: GlobalVarsProvider) {
+            let objCasa = this.navParams.get("obj");
+            this.objetoRecibido = navParams.data;
     }
 
     ionViewDidLoad() {

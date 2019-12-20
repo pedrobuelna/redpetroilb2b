@@ -30,27 +30,27 @@
         <ion-toggle color="secondary" checked></ion-toggle>
     </ion-item> -->
   </ion-list>
-  <ion-list>
-    <ion-item>
-      <ion-label><span class="texto1G">Diesel</span></ion-label>
-      <ion-toggle color="secondary" checked></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label><span class="texto1G">Magna</span></ion-label>
-      <ion-toggle color="secondary" checked></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label><span class="texto1G">Premium</span></ion-label>
-      <ion-toggle color="secondary" checked></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label><span class="texto1G">Grafica1</span></ion-label>
-      <ion-toggle color="secondary"></ion-toggle>
-    </ion-item>
-    <ion-item>
-      <ion-label><span class="texto1G">Grafica2</span></ion-label>
-      <ion-toggle color="secondary" ></ion-toggle>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-label><span class="texto1G">Diesel</span></ion-label>
+            <ion-toggle [(ngModel)]="globalVars.preferencias.graficaDiesel.status" color="secondary"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label><span class="texto1G">Magna</span></ion-label>
+            <ion-toggle [(ngModel)]="globalVars.preferencias.graficaMagna.status" color="secondary"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label><span class="texto1G">Premium</span></ion-label>
+            <ion-toggle [(ngModel)]="globalVars.preferencias.graficaPremium.status" color="secondary"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label><span class="texto1G">Grafica1</span></ion-label>
+            <ion-toggle [(ngModel)]="globalVars.preferencias.graficaUno.status" color="secondary"></ion-toggle>
+        </ion-item>
+        <ion-item>
+            <ion-label><span class="texto1G">Grafica2</span></ion-label>
+            <ion-toggle [(ngModel)]="globalVars.preferencias.graficaDos.status" color="secondary" ></ion-toggle>
+        </ion-item>
+    </ion-list>
 </ion-content>
 

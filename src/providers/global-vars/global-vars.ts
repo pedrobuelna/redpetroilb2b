@@ -10,6 +10,32 @@ import { Injectable } from '@angular/core';
 export class GlobalVarsProvider {
 
     constructor() {}
+
+    
+    private _preferencias : any = {
+        "graficaDiesel" : {
+            "status" : true
+        },
+        "graficaMagna" : {
+            "status" : true
+        },
+        "graficaPremium" : {
+            "status" : false
+        },
+        "graficaUno" : {
+            "status" : false
+        },
+        "graficaDos" : {
+            "status" : true
+        },
+    }
+    public get preferencias() : any {
+        return this._preferencias;
+    }
+    public set preferencias(v : any) {
+        this._preferencias = v;
+    }
+    
     
     private _isAndroid : boolean = false;
     public get isAndroid() : boolean {
