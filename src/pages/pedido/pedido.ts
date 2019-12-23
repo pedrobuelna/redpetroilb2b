@@ -37,7 +37,71 @@ export class PedidoPage {
         this.fecha = this.formgroup.controls["fecha"];
         this.hora = this.formgroup.controls["hora"];
     }
-
+    public pedidosGas = [
+        {
+            "status" : "",
+            "statusPrecios" : "PETROIL retira producto",
+        },
+        {
+            "status" : "",
+            "statusPrecios" : "",
+        },
+        {
+            "status" : "",
+            "statusPrecios" : "",
+        }
+    ];
+    public combos = [
+        {
+            "status" : "",
+        }
+    ];
+    public selects = [
+        {
+            "status" : "",
+            "descripcion" : "PETROIL retira producto",
+        },
+        {
+            "status" : "",
+            "descripcion" : "PEMEX entrega producto",
+        },
+        {
+            "status" : "",
+            "descripcion" : "Cliente retira producto PEMEX",
+        },
+        {
+            "status" : "",
+            "descripcion" : "Cliente retira producto planta",
+        }
+    ];
+    public openCombo(index): void {
+        // console.log("index",index);
+        _.map(this.combos,(item,indexItem) => {
+            if (indexItem == index) {
+                if (item.status == "") {
+                    item.status = "active";
+                }
+                else {
+                    item.status = ""
+                }
+            }
+        });
+    }
+    public checkCombo(index): void {
+        //console.log("index",index);
+        _.map(this.selects,(item,indexItem) => {
+            console.log("index",index);
+            console.log("indexItem",indexItem);
+            if (indexItem-1 == index) {
+                if (item.status == "") {
+                    item.status = "active";
+                }
+                else {
+                    item.status = ""
+                }
+            }
+        });
+    }
     ionViewDidLoad() {
         console.log('ionViewDidLoad PedidoPage');
         

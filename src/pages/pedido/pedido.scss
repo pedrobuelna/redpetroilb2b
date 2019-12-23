@@ -6,4 +6,29 @@ page-pedido {
     .col1{width: 100%;}
     .col2{width: calc(50% - 5px); float: left;}
     .col2:last-child{margin-left: 10px;}
+    .combo_list .droparrow{position: absolute;
+        width: 30px;
+        height: 20px;
+        bottom: -1px;
+        right: -1px;
+        background-image: url(../assets/imgs/arrow.png);
+        background-size: 10px;
+        background-position: right 5px bottom 4px;
+        background-repeat: no-repeat;}
+
+        .combo_list.active .droparrow {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            bottom: -7px;
+            right: -4px;
+            background-image: url(../assets/imgs/arrow.png);
+            background-size: 10px;
+            background-position: right 5px bottom 4px;
+            background-repeat: no-repeat;
+            -webkit-transform: rotate(-63deg);
+            transform: rotate(-63deg);
+        }
 }
+

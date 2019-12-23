@@ -541,32 +541,8 @@ ul.combo_list {
     box-sizing: border-box;
     overflow: hidden;
 }
-ul.combo_list:before {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 20px;
-    bottom: 0px;
-    right: 0;
-    background-image: url(../assets/imgs/arrow.png);
-    background-size: 10px;
-    background-position: right 5px bottom 4px;
-    background-repeat: no-repeat;
-}
-ul.combo_list.active:before {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 20px;
-    bottom: -7px;
-    right: -4px;
-    background-image: url(../assets/imgs/arrow.png);
-    background-size: 10px;
-    background-position: right 5px bottom 4px;
-    background-repeat: no-repeat;
-    -webkit-transform: rotate(-63deg);
-    transform: rotate(-63deg);
-}
+
+
 
 ul.combo_list li {
     width: 100%;
