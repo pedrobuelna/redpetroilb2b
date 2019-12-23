@@ -138,7 +138,7 @@ ion-app * {
         }
     }
 }
-  
+
 .home .content_logo {
     margin: auto;
     height: 100%;
@@ -379,12 +379,12 @@ img.ver {
 #direcciones .ion-md-add, #direcciones .ion-md-add,
 #graficas .ion-md-add{margin-right: 16px;font-size: 65px;}
 .pedido_content{margin-bottom: 35px;border: 1px solid #707070;height: 62px;vertical-align: middle;display: flex;align-items: center;}
-.s1{width: 20%;font-size: 10px;text-align: center;color:#0B3B61;border-right: 1px solid #707070;margin-top: 3px;font-weight: 500;}
+.s1{width: 20%;font-size: 10px;text-align: center;color:#0B3B61;border-right: 1px solid #707070;margin-top: 3px;font-weight: 500;box-sizing: border-box;padding: 0 5px;}
 .linea{border-bottom:1px solid #707070;margin: 3px 5px;}
 .s2{width: 44%;font-size: 13px;color: #0B3B61;font-weight: 500;}
 .txt1{margin-top: 5px;}
 .content_kg{margin: 2px 0 0 10px;}
-.gas_img{width: 100%; display: block;}
+.gas_img{width: 100%; display: block;height: 30.5px;}
 .txt3{font-size: 30px;font-weight: 500;color: #0B3B61;}
 .s3{width: 36%;}
 .estado_txt{height: 29px;background: #F2C69E;text-align: center;font-size: 16px;vertical-align: middle;font-weight: 500;line-height: 28px;}
@@ -531,6 +531,60 @@ img.ver {
 .menu_pedido{position: absolute;right: 10px;top: 27px;}
 .content_txt2{margin-top: 10px;}
 .texto3G{font-size: 30px;font-weight: 500;line-height: 30px;}
+ul.combo_list {
+    position: relative;
+    margin: 0 0 15px;
+    padding-left: 0;
+    border: 2px solid #707070;
+    height: 32px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+ul.combo_list:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    bottom: 0px;
+    right: 0;
+    background-image: url(../assets/imgs/arrow.png);
+    background-size: 10px;
+    background-position: right 5px bottom 4px;
+    background-repeat: no-repeat;
+}
+ul.combo_list.active:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    bottom: -7px;
+    right: -4px;
+    background-image: url(../assets/imgs/arrow.png);
+    background-size: 10px;
+    background-position: right 5px bottom 4px;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(-63deg);
+    transform: rotate(-63deg);
+}
+
+ul.combo_list li {
+    width: 100%;
+    line-height: 29px;
+    font-weight: 500;
+    height: 31px;
+    border-radius: 0;
+    margin-bottom: 15px;
+    list-style: none;
+    padding-left: 10px;
+}
+ul.combo_list.active{
+    overflow: hidden;
+    padding-top: 5px;height: 195px;
+}
+ul.combo_list li.active {
+    background: #F98E2B;
+}
 .box_pedido_content:nth-of-type(odd){
     background: #F98E2B;
 }
@@ -564,3 +618,9 @@ img.ver {
 .content_tabla_litros{font-size: 20px;font-weight: 500;width: 100%;}
 .content_tabla_litros table{width: 100%;}
 .content_tabla_litros > div{display: table-cell;}
+select{-webkit-appearance: none;padding-left: 10px;
+    -moz-appearance:none;
+    appearance: none;}
+// .select-icon{
+//     display: none;
+// }

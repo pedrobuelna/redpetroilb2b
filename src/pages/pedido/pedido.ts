@@ -12,15 +12,17 @@ import moment from "moment";
  */
 
 @IonicPage()
+
 @Component({
   selector: 'page-pedido',
   templateUrl: 'pedido.html',
 })
 export class PedidoPage {
-
+    
     public inputDate: string = "";
-
+    public startDate:String = "";
     public inputDateTime: string = "";
+    private date: string = "";
     formgroup:FormGroup;
     fecha:AbstractControl;
     hora:AbstractControl;
@@ -38,12 +40,23 @@ export class PedidoPage {
 
     ionViewDidLoad() {
         console.log('ionViewDidLoad PedidoPage');
+        
+
+        // this.date = new Date().toISOString();
+        
+
+        let isoDate = new Date().toISOString();
+        var d = new Date(isoDate);
+        //d.toLocaleDateString('en-GB');
+        this.inputDate = d.toLocaleDateString('es-MX');
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes();
+        this.inputDateTime = time;
     }
     onclickPedidos() {
         this.navCtrl.setRoot("PedidosPage",null,{direction:"back",animate:true})
         //this.navCtrl.push("DireccionesPage");
     }
-
     public onFocusDate(): void {
         const picker = new MaterialDateTimePicker({
             "datePickerOnly" : true
