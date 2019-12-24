@@ -74,34 +74,34 @@ export class PedidoPage {
             "descripcion" : "Cliente retira producto planta",
         }
     ];
-    public openCombo(index): void {
-        // console.log("index",index);
-        _.map(this.combos,(item,indexItem) => {
-            if (indexItem == index) {
-                if (item.status == "") {
-                    item.status = "active";
-                }
-                else {
-                    item.status = ""
-                }
-            }
-        });
-    }
-    public checkCombo(index): void {
-        //console.log("index",index);
-        _.map(this.selects,(item,indexItem) => {
-            console.log("index",index);
-            console.log("indexItem",indexItem);
-            if (indexItem-1 == index) {
-                if (item.status == "") {
-                    item.status = "active";
-                }
-                else {
-                    item.status = ""
-                }
-            }
-        });
-    }
+    // public openCombo(index): void {
+    //     // console.log("index",index);
+    //     _.map(this.combos,(item,indexItem) => {
+    //         if (indexItem == index) {
+    //             if (item.status == "") {
+    //                 item.status = "active";
+    //             }
+    //             else {
+    //                 item.status = ""
+    //             }
+    //         }
+    //     });
+    // }
+    // public checkCombo(item): void {
+    //     //console.log("index",index);
+    //     _.map(this.selects,(item,indexItem) => {
+    //         console.log("index",item);
+    //         console.log("indexItem",indexItem);
+    //         if (indexItem == item) {
+    //             if (item.status == "") {
+    //                 item.status = "active";
+    //             }
+    //             else {
+    //                 item.status = ""
+    //             }
+    //         }
+    //     });
+    // }
     ionViewDidLoad() {
         console.log('ionViewDidLoad PedidoPage');
         
@@ -114,7 +114,19 @@ export class PedidoPage {
         //d.toLocaleDateString('en-GB');
         this.inputDate = d.toLocaleDateString('es-MX');
         var today = new Date();
-        var time = today.getHours() + ":" + today.getMinutes();
+        var horas;
+        var minutos;
+        if(today.getHours().toString().length == 1) {
+            horas = '0'+today.getHours();
+        }else{
+            horas = today.getHours();
+        }
+       if(today.getMinutes().toString().length == 1) {
+            minutos = '0'+today.getMinutes();
+       }else{
+        minutos = today.getMinutes();
+       }
+        var time = horas + ":" + minutos;
         this.inputDateTime = time;
     }
     onclickPedidos() {

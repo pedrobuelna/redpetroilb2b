@@ -45,7 +45,7 @@
       </div>
       <div class="input_content">
         <label for="formaEntrega">Forma de entrega</label>
-        <ng-template ngFor let-combo let-i="index" [ngForOf]="combos">
+        <!-- <ng-template ngFor let-combo let-i="index" [ngForOf]="combos">
             <ul *ngIf="combo?.status == 'active' " class="combo_list active">
                 <span class="droparrow" (click)="openCombo(i)"></span>
                 <ng-template ngFor let-select let-i="index" [ngForOf]="selects">
@@ -53,7 +53,7 @@
                         <span (click)="checkCombo(i)" >{{select?.descripcion}}</span>
                     </li>
                 </ng-template>
-            </ul>
+            </ul> -->
             <!-- <ul class="combo_list active">
                 <ng-template ngFor let-pedido let-i="index" [ngForOf]="pedidosGas">
                     <li *ngIf="pedido?.status == 'active' " class="active" (click)="openBar(i)">
@@ -64,7 +64,7 @@
                     </li>
                 </ng-template>
             </ul> -->
-        </ng-template>
+        <!-- </ng-template>
         <ng-template ngFor let-combo let-i="index" [ngForOf]="combos">
             <ul *ngIf="combo?.status != 'active' " class="combo_list"  >
                 <span class="droparrow" (click)="openCombo(i)"></span>
@@ -74,9 +74,8 @@
                     </li>
                 </ng-template>
             </ul>
-        </ng-template>
+        </ng-template> -->
         <!-- <ul class="combo_list active">
-          
           <li>
             <span>PETROIL retira producto</span>
           </li>
@@ -89,14 +88,14 @@
           <li>
             <span>Cliente retira producto planta</span>
           </li>
-        </ul> -->
-        <input type="hidden" name="formaEntrega" id="formaEntrega">
-          <!-- <select name="formaEntrega" id="formaEntrega">
+        </ul>
+        <input type="hidden" name="formaEntrega" id="formaEntrega"> -->
+          <select name="formaEntrega" id="formaEntrega">
             <option value="1">PETROIL retira producto</option>
             <option value="2">PEMEX retira producto</option>
             <option value="3">Cliente retira producto de PEMEX</option>
             <option value="4">Cliente retira producto Planta</option>
-          </select> -->
+          </select>
       </div>
       <div class="input_content">
         <label for="formaCompra">Forma de compra</label>
