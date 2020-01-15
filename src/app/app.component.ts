@@ -33,7 +33,7 @@ export class MyApp {
     this.globalVars.pages = [
       { title: 'Inicio', component: GRAFICAS_PAGE,"requiredLogged" : false, },
       // { title: 'List', component: ListPage }
-      { title: 'Elaboración de pedido', component: PEDIDO_NUEVO,"requiredLogged" : false, },
+      { title: 'Pedir Producto', component: PEDIDO_NUEVO,"requiredLogged" : false, },
       { title: 'Mis Datos', "subtitle" : "Mis Datos +", component: MISDATOS_PAGE, "requiredLogged" : true,
                 "statusClass" : "hide-menu", "subPage" : [
                     {
@@ -44,9 +44,9 @@ export class MyApp {
                     }
                 ]
         },
-      { title: 'Estatus de Pedidos', component: PEDIDOS_PAGE, "requiredLogged" : false, },
+      { title: 'Mis Pedidos', component: PEDIDOS_PAGE, "requiredLogged" : false, },
       { title: 'Preferencias', component: PREFERENCIAS_PAGE, "requiredLogged" : false, },
-      { title: 'Estado de Cuenta', component: GRAFICAS_PAGE, "requiredLogged" : false, }
+      //{ title: 'Estado de Cuenta', component: GRAFICAS_PAGE, "requiredLogged" : false, }
     ];
 
   }
@@ -99,6 +99,8 @@ export class MyApp {
         else if (this.globalVars.isIOS) {
             buttonSize = 70;
         }
+
+        console.log("tamano ",_.size(items) * buttonSize);
         return _.size(items) * buttonSize;
     }
 

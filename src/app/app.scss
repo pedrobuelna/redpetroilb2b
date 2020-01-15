@@ -31,7 +31,29 @@ body {
 ion-app * {
     box-sizing: border-box;
 }
-
+.input-wrapper .label  > img{
+    width: 38px;
+    display: block;
+    margin: 0 auto 22px;
+}
+.input-wrapper .label  > img[alt="Pedir Producto"]{
+    width: 72px;
+}
+.input-wrapper .label  > img[alt="Mis Datos"]{
+    width: 49px;
+}
+.input-wrapper .label  > img[alt="Mis Pedidos"]{
+    width: 45px;
+}
+.input-wrapper .label  > img[alt="Preferencias"]{
+    width: 37px;
+}
+.input-wrapper .label  > img[alt="Empresa"]{
+    width: 46px;
+}
+.input-wrapper .label  > img[alt="Dirección de Entrega"]{
+    width: 31px;
+}
 .submenu_content {
     margin: 0;
     transition: all 250ms ease;

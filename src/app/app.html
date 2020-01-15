@@ -27,12 +27,14 @@
         {{p.title}}
       </button> -->
         <div *ngIf="globalVars.logged" class="logueadoClass">
-            <ng-template ngFor let-page [ngForOf]="globalVars.pages"> 
+            <ng-template ngFor let-page [ngForOf]="globalVars.pages" > 
                 <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.requiredLogged" ion-item>
                     <div class="{{page?.title}}"></div>
+                    <img src="../assets/imgs/{{page?.title}}.png" alt="{{page?.title}}">
                     {{page?.title}}
                 </button>
                 <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && ( page.requiredLogged && globalVars.logged)" ion-item>
+                    <img src="../assets/imgs/{{page?.title}}.png" alt="{{page?.title}}">
                     {{page?.title}}
                 </button>
                 <ng-container *ngIf="page?.subPage">
@@ -41,18 +43,19 @@
                     </button>
                     <button *ngIf="( page.requiredLogged && globalVars.logged)" ion-item (click)="openSubMenu(page)">
                             <!-- <div>Icono</div> -->
+                            <img src="../assets/imgs/{{page?.title}}.png" alt="{{page?.title}}">
                         {{page?.subtitle}}
                     </button>
                     <ion-list [style.height.px]="calculateHeight(page.subPage)" [ngClass]="page?.statusClass" class="submenu_content">
+                    <!-- <ion-list [ngClass]="page?.statusClass" class="submenu_content"> -->
                         <button 
                             menuClose
                             ion-item 
                             (click)="openPage(subPage)" 
                             *ngFor="let subPage of page.subPage" 
                             [ngClass]="page?.statusClassList"
-                            class="txtSubmenu"><img src="../assets/imgs/" alt="inicio">{{subPage?.title}}</button>
+                            class="txtSubmenu"><img src="../assets/imgs/{{subPage?.title}}.png" alt="{{page?.title}}">{{subPage?.title}}</button>
                             <!-- class="txtSubmenu">{{subPage?.title}}</button> -->
-                            
                     </ion-list>
                 </ng-container>
             </ng-template>
@@ -60,6 +63,7 @@
         <div *ngIf="!globalVars.logged" >
             <ng-template ngFor let-page [ngForOf]="globalVars.pages"> 
                 <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && !page.requiredLogged" ion-item>
+                    <img src="../assets/imgs/{{page?.title}}.png" alt="{{page?.title}}">
                     {{page?.title}}
                 </button>
                 <button menuClose (click)="openPage(page)" *ngIf="!page.subPage && ( page.requiredLogged && globalVars.logged)" ion-item>
