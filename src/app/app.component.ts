@@ -94,10 +94,10 @@ export class MyApp {
         console.log("items",items);
         let buttonSize = 0;
         if (this.globalVars.isAndroid) {
-            buttonSize = 70;
+            buttonSize = 150;
         }
         else if (this.globalVars.isIOS) {
-            buttonSize = 70;
+            buttonSize = 150;
         }
 
         console.log("tamano ",_.size(items) * buttonSize);
